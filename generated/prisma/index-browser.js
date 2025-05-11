@@ -120,9 +120,117 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
+exports.Prisma.UserScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  email: 'email',
+  gender: 'gender',
+  birth_date: 'birth_date',
+  region: 'region',
+  address: 'address',
+  total_point: 'total_point',
+  phoneNumber: 'phoneNumber'
+};
+
+exports.Prisma.StoreScalarFieldEnum = {
+  id: 'id',
+  store_name: 'store_name',
+  verifcation_id: 'verifcation_id',
+  open_time: 'open_time',
+  close_time: 'close_time',
+  address: 'address',
+  food_type_id: 'food_type_id'
+};
+
+exports.Prisma.FoodTypeScalarFieldEnum = {
+  id: 'id',
+  type: 'type'
+};
+
+exports.Prisma.FoodScalarFieldEnum = {
+  id: 'id',
+  store_id: 'store_id',
+  price: 'price',
+  name: 'name'
+};
+
+exports.Prisma.UserFoodDbScalarFieldEnum = {
+  user_id: 'user_id',
+  food_id: 'food_id'
+};
+
+exports.Prisma.MissionScalarFieldEnum = {
+  id: 'id',
+  status: 'status',
+  content: 'content',
+  deadline: 'deadline',
+  created_at: 'created_at',
+  updated_at: 'updated_at',
+  store_id: 'store_id',
+  point: 'point',
+  user_id: 'user_id'
+};
+
+exports.Prisma.ReviewScalarFieldEnum = {
+  id: 'id',
+  text: 'text',
+  rating: 'rating',
+  user_id: 'user_id',
+  store_id: 'store_id',
+  created_at: 'created_at',
+  updated_at: 'updated_at'
+};
+
+exports.Prisma.SortOrder = {
+  asc: 'asc',
+  desc: 'desc'
+};
+
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
+exports.Prisma.UserOrderByRelevanceFieldEnum = {
+  name: 'name',
+  email: 'email',
+  gender: 'gender',
+  region: 'region',
+  address: 'address',
+  phoneNumber: 'phoneNumber'
+};
+
+exports.Prisma.StoreOrderByRelevanceFieldEnum = {
+  store_name: 'store_name',
+  address: 'address'
+};
+
+exports.Prisma.FoodTypeOrderByRelevanceFieldEnum = {
+  type: 'type'
+};
+
+exports.Prisma.FoodOrderByRelevanceFieldEnum = {
+  name: 'name'
+};
+
+exports.Prisma.MissionOrderByRelevanceFieldEnum = {
+  status: 'status',
+  content: 'content'
+};
+
+exports.Prisma.ReviewOrderByRelevanceFieldEnum = {
+  text: 'text'
+};
+
 
 exports.Prisma.ModelName = {
-
+  User: 'User',
+  Store: 'Store',
+  FoodType: 'FoodType',
+  Food: 'Food',
+  UserFoodDb: 'UserFoodDb',
+  Mission: 'Mission',
+  Review: 'Review'
 };
 
 /**
