@@ -1,8 +1,17 @@
 // import { responseFromMission } from "../dtos/mission.dto.js";
 import {
-    addMission as addMissionRepo,
-    challengeMission as challengeMissionRepo,
-  } from "../repositories/mission.repository.js";
+  addMission as addMissionRepo,
+  challengeMission as challengeMissionRepo,
+  showStoreMission as showStoreMissionRepo,
+  showUserMission as showUserMissionRepo
+} from "../repositories/mission.repository.js";
+
+import {
+  MissionIdNotFoundError,
+  ChallengeIdNotFoundError,
+  StoreIdNotFoundError,
+  UserIdNotFoundError
+} from "../errors.js";
 
 export const addMission = async (data) => {
   const missionId = await addMissionRepo({
@@ -13,31 +22,33 @@ export const addMission = async (data) => {
   });
 
   if (!missionId) {
-    throw new Error("미션 추가에 실패했습니다.");
+    throw new MissionIdNotFoundError("missionId가 없습니다.", data);
   }
 
   return { missionId };
 };
 
 export const challengeMission = async (data) => {
-    const challengeId = await challengeMissionRepo({
-      userId: data.userId,
-      missionId: data.missionId,
-    });
-  
-    if (!challengeId) {
-      throw new Error("미션 도전 등록에 실패했습니다.");
-    }
-  
-    return { challengeId };
-  };
+  const challengeId = await challengeMissionRepo({
+    userId: data.userId,
+    missionId: data.missionId,
+  });
 
-  export const showStoreMission = async (store_id) => {
-    if (!store_id) throw new Error("storeId가 필요합니다.");
-    return await showStoreMissionRepo(store_id);
+  if (!challengeId) {
+    throw new ChallengeIdNotFoundError("challengeId가 없습니다.", data);
+  }
+
+  return { challengeId };
+};
+
+export const showStoreMission = async (storeId) => {
+  if (!storeId) throw new StoreIdNotFoundError("storeId가 없습니다.", data);
+  return await showStoreMissionRepo(storeId);
 };
   
-export const showUserMission = async (user_id) => {
-    if (!user_id) throw new Error("userId가 필요합니다.");
-    return await showUserMissionRepo(user_id);
+export const showUserMission = async (userId) => {
+  if (!userId) {
+    throw new UserIdNotFoundError("userId가 없습니다.", data);
+  }
+  return await showUserMissionRepo(userId);
 };

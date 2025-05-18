@@ -2,101 +2,126 @@ import { pool } from "../db.config.js";
 import { prisma } from "../db.config.js";
 
 export const addMission = async (data) => {
-    const conn = await pool.getConnection();
-  
-    try {
-        await conn.beginTransaction();
+  try {
+    const result = await prisma.$transaction(async (tx) => {
+      // 가게 존재 여부 확인
+      const store = await tx.store.findUnique({
+        where: { id: data.storeId },
+        select: { id: true },
+      });
 
-        const [storeCheck] = await conn.query(
-          `SELECT EXISTS(SELECT 1 FROM store WHERE id = ?) AS isExistStore;`,
-          [data.storeId]
-        );
-    
-        if (!storeCheck[0].isExistStore) {
-          throw new Error("존재하지 않는 가게입니다.");
-        }
-  
-        const [insertResult] = await conn.query(
-            `INSERT INTO mission (content, deadline, point, store_id, created_at, updated_at) VALUES (?, ?, ?, ?, NOW(), NOW());`,
-            [data.content, data.deadline, data.point, data.storeId]
-        );
-  
-        const missionId = insertResult.insertId;
+      if (!store) {
+        throw new StoreIdNotFoundError("존재하지 않는 가게입니다.", { storeId: data.storeId });
+      }
 
-        const [missionRows] = await conn.query(
-            `SELECT id, content, deadline, point, status, created_at, updated_at FROM mission WHERE id = ?;`,
-            [missionId]
-        );
+      // 미션 생성
+      const mission = await tx.mission.create({
+        data: {
+          content: data.content,
+          deadline: new Date(data.deadline),
+          point: data.point,
+          store: {
+            connect: { id: data.storeId },
+          },
+        },
+        select: {
+          id: true,
+          content: true,
+          deadline: true,
+          point: true,
+          status: true,
+          createdAt: true,
+          updatedAt: true,
+        },
+      });
 
-        await conn.commit();
-        return missionRows[0];
-    } catch (err) {
-        await conn.rollback();
-        throw new Error(`미션 추가 실패: ${err.message}`);
-    } finally {
-      conn.release();
-    }
-  };
+      return mission;
+    });
+
+    return result;
+  } catch (err) {
+    if (err instanceof StoreIdNotFoundError) throw err;
+    throw new MissionTransactionError("미션 추가 실패", { originalError: err });
+  }
+};
 
   export const challengeMission = async ({ userId, missionId }) => {
-    const conn = await pool.getConnection();
     try {
-      await conn.beginTransaction();
+      const result = await prisma.$transaction(async (tx) => {
+        // 사용자 존재 여부 확인
+        const user = await tx.user.findUnique({
+          where: { id: userId },
+          select: { id: true },
+        });
   
-      const [userCheck] = await conn.query(
-        `SELECT EXISTS(SELECT 1 FROM user WHERE id = ?) AS isExistUser;`,
-        [userId]
-      );
-      if (!userCheck[0].isExistUser) {
-        throw new Error("존재하지 않는 사용자입니다.");
-      }
+        if (!user) {
+          throw new UserIdNotFoundError("존재하지 않는 사용자입니다.", { userId });
+        }
   
-      const [missionCheck] = await conn.query(
-        `SELECT status FROM mission WHERE id = ?;`,
-        [missionId]
-      );
-      if (missionCheck.length === 0) {
-        throw new Error("존재하지 않는 미션입니다.");
-      }
-      if (missionCheck[0].status !== "대기중") {
-        throw new Error("이미 도전 중이거나 완료된 미션입니다.");
-      }
+        // 미션 존재 및 상태 확인
+        const mission = await tx.mission.findUnique({
+          where: { id: missionId },
+          select: { status: true },
+        });
   
-      await conn.query(
-        `UPDATE mission 
-         SET status = '진행 중', user_id = ?, updated_at = NOW() 
-         WHERE id = ?;`,
-        [userId, missionId]
-      );
+        if (!mission) {
+          throw new MissionIdNotFoundError("존재하지 않는 미션입니다.", { missionId });
+        }
   
-      await conn.commit();
-      return missionId;
+        if (mission.status !== "대기 중") {
+          throw new MissionStatusInvalidError("이미 도전 중이거나 완료된 미션입니다.", {
+            missionId,
+            status: mission.status,
+          });
+        }
+  
+        // 미션 상태 업데이트
+        await tx.mission.update({
+          where: { id: missionId },
+          data: {
+            status: "진행 중",
+            user: { connect: { id: userId } },
+          },
+        });
+  
+        return missionId;
+      });
+  
+      return result;
     } catch (err) {
-      await conn.rollback();
-      throw new Error(`미션 도전 실패: ${err.message}`);
-    } finally {
-      conn.release();
+      if (
+        err instanceof UserIdNotFoundError ||
+        err instanceof MissionIdNotFoundError ||
+        err instanceof MissionStatusInvalidError
+      ) {
+        throw err;
+      }
+      throw new MissionTransactionError("미션 도전 실패", {
+        missionId,
+        userId,
+        originalError: err,
+      });
     }
   };
 
   export const showStoreMission = async (storeId) => {
     return await prisma.mission.findMany({
-      where: { store_id },
+      where: { storeId },
       select: {
         id: true,
         content: true,
         deadline: true,
         point: true,
-        created_at: true,
+        createdAt: true,
       },
-      orderBy: { created_at: 'desc' },
+      orderBy: { createdAt: 'desc' },
     });
   };
   
   export const showUserMission = async (userId) => {
     return await prisma.mission.findMany({
       where: {
-        user_id,
+        userId,
         status: '진행중',
       },
       select: {
@@ -110,10 +135,10 @@ export const addMission = async (data) => {
             name: true,
           }
         },
-        created_at: true,
+        createdAt: true,
       },
       orderBy: {
-        created_at: 'desc',
+        createdAt: 'desc',
       },
     });
   };

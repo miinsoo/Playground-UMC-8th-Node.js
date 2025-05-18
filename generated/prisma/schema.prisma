@@ -19,10 +19,10 @@ model User {
   name        String   @db.VarChar(255)
   email       String   @db.VarChar(255)
   gender      String   @db.VarChar(255)
-  birth_date  DateTime @db.Date
+  birthDate   DateTime @map("birth_date") @db.Date
   region      String   @db.VarChar(255)
   address     String   @db.VarChar(255)
-  total_point Int?     @default(0)
+  totalPoint  Int?     @default(0) @map("total_point")
   phoneNumber String   @db.VarChar(255)
 
   missions  Mission[]
@@ -33,20 +33,20 @@ model User {
 }
 
 model Store {
-  id             Int       @id @default(autoincrement()) @db.Int
-  store_name     String    @db.VarChar(255)
-  verifcation_id Int       @db.Int
-  open_time      DateTime? @db.Time
-  close_time     DateTime? @db.Time
-  address        String    @db.VarChar(255)
-  food_type_id   Int?      @unique
+  id            Int       @id @default(autoincrement()) @db.Int
+  storeName     String    @map("store_name") @db.VarChar(255)
+  verifcationId Int       @map("verifcation_id") @db.Int
+  openTime      DateTime? @map("open_time") @db.Time
+  closeTime     DateTime? @map("close_time") @db.Time
+  address       String    @db.VarChar(255)
+  foodTypeId    Int?      @unique @map("food_type_id")
 
-  foodType FoodType? @relation(fields: [food_type_id], references: [id])
+  foodType FoodType? @relation(fields: [foodTypeId], references: [id])
   missions Mission[]
   reviews  Review[]
   foods    Food[]
 
-  @@index([food_type_id], map: "fk_store_food_type")
+  @@index([foodTypeId], map: "fk_store_food_type")
   @@map("store")
 }
 
@@ -61,60 +61,60 @@ model FoodType {
 }
 
 model Food {
-  id       Int    @id @default(autoincrement()) @db.Int
-  store_id Int
-  price    Int
-  name     String @db.VarChar(255)
+  id      Int    @id @default(autoincrement()) @db.Int
+  storeId Int    @map("store_id")
+  price   Int
+  name    String @db.VarChar(255)
 
-  store Store @relation(fields: [store_id], references: [id])
+  store Store @relation(fields: [storeId], references: [id])
 
-  @@index([store_id])
+  @@index([storeId])
   @@map("food")
 }
 
 model UserFoodDb {
-  user_id Int
-  food_id Int
+  userId Int @map("user_id")
+  foodId Int @map("food_id")
 
-  user     User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
-  foodType FoodType @relation(fields: [food_id], references: [id], onDelete: Cascade)
+  user     User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  foodType FoodType @relation(fields: [foodId], references: [id], onDelete: Cascade)
 
-  @@id([user_id, food_id])
+  @@id([userId, foodId])
   @@map("user_food_db")
 }
 
 model Mission {
-  id         Int       @id @default(autoincrement()) @db.Int
-  status     String    @default("대기중") @db.VarChar(255)
-  content    String    @db.VarChar(255)
-  deadline   DateTime  @db.DateTime
-  created_at DateTime? @default(dbgenerated("CURRENT_TIMESTAMP")) @db.DateTime
-  updated_at DateTime? @updatedAt @db.DateTime
-  store_id   Int
-  point      Int
-  user_id    Int?
+  id        Int       @id @default(autoincrement()) @db.Int
+  status    String    @default("대기중") @db.VarChar(255)
+  content   String    @db.VarChar(255)
+  deadline  DateTime  @db.DateTime
+  createdAt DateTime? @default(dbgenerated("CURRENT_TIMESTAMP")) @map("created_at") @db.DateTime
+  updatedAt DateTime? @updatedAt @map("updated_at") @db.DateTime
+  storeId   Int       @map("store_id")
+  point     Int
+  userId    Int?      @map("user_id")
 
-  store Store @relation(fields: [store_id], references: [id])
-  user  User? @relation(fields: [user_id], references: [id], onDelete: SetNull)
+  store Store @relation(fields: [storeId], references: [id])
+  user  User? @relation(fields: [userId], references: [id], onDelete: SetNull)
 
-  @@index([store_id], map: "fk_mission_store")
-  @@index([user_id], map: "fk_misson_user")
+  @@index([storeId], map: "fk_mission_store")
+  @@index([userId], map: "fk_misson_user")
   @@map("mission")
 }
 
 model Review {
-  id         Int       @id @default(autoincrement()) @db.Int
-  text       String    @db.VarChar(255)
-  rating     Int
-  user_id    Int?
-  store_id   Int?
-  created_at DateTime? @default(dbgenerated("CURRENT_TIMESTAMP")) @db.DateTime
-  updated_at DateTime? @updatedAt @db.DateTime
+  id        Int       @id @default(autoincrement()) @db.Int
+  text      String    @db.VarChar(255)
+  rating    Int
+  userId    Int?      @map("user_id")
+  storeId   Int?      @map("store_id")
+  createdAt DateTime? @default(dbgenerated("CURRENT_TIMESTAMP")) @map("created_at") @db.DateTime
+  updatedAt DateTime? @updatedAt @map("updated_at") @db.DateTime
 
-  user  User?  @relation(fields: [user_id], references: [id], onDelete: Cascade)
-  store Store? @relation(fields: [store_id], references: [id], onDelete: Cascade)
+  user  User?  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  store Store? @relation(fields: [storeId], references: [id], onDelete: Cascade)
 
-  @@index([user_id], map: "fk_review_user")
-  @@index([store_id], map: "fk_review_store")
+  @@index([userId], map: "fk_review_user")
+  @@index([storeId], map: "fk_review_store")
   @@map("review")
 }

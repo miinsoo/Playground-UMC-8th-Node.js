@@ -125,21 +125,21 @@ exports.Prisma.UserScalarFieldEnum = {
   name: 'name',
   email: 'email',
   gender: 'gender',
-  birth_date: 'birth_date',
+  birthDate: 'birthDate',
   region: 'region',
   address: 'address',
-  total_point: 'total_point',
+  totalPoint: 'totalPoint',
   phoneNumber: 'phoneNumber'
 };
 
 exports.Prisma.StoreScalarFieldEnum = {
   id: 'id',
-  store_name: 'store_name',
-  verifcation_id: 'verifcation_id',
-  open_time: 'open_time',
-  close_time: 'close_time',
+  storeName: 'storeName',
+  verifcationId: 'verifcationId',
+  openTime: 'openTime',
+  closeTime: 'closeTime',
   address: 'address',
-  food_type_id: 'food_type_id'
+  foodTypeId: 'foodTypeId'
 };
 
 exports.Prisma.FoodTypeScalarFieldEnum = {
@@ -149,14 +149,14 @@ exports.Prisma.FoodTypeScalarFieldEnum = {
 
 exports.Prisma.FoodScalarFieldEnum = {
   id: 'id',
-  store_id: 'store_id',
+  storeId: 'storeId',
   price: 'price',
   name: 'name'
 };
 
 exports.Prisma.UserFoodDbScalarFieldEnum = {
-  user_id: 'user_id',
-  food_id: 'food_id'
+  userId: 'userId',
+  foodId: 'foodId'
 };
 
 exports.Prisma.MissionScalarFieldEnum = {
@@ -164,21 +164,21 @@ exports.Prisma.MissionScalarFieldEnum = {
   status: 'status',
   content: 'content',
   deadline: 'deadline',
-  created_at: 'created_at',
-  updated_at: 'updated_at',
-  store_id: 'store_id',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  storeId: 'storeId',
   point: 'point',
-  user_id: 'user_id'
+  userId: 'userId'
 };
 
 exports.Prisma.ReviewScalarFieldEnum = {
   id: 'id',
   text: 'text',
   rating: 'rating',
-  user_id: 'user_id',
-  store_id: 'store_id',
-  created_at: 'created_at',
-  updated_at: 'updated_at'
+  userId: 'userId',
+  storeId: 'storeId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 };
 
 exports.Prisma.SortOrder = {
@@ -201,7 +201,7 @@ exports.Prisma.UserOrderByRelevanceFieldEnum = {
 };
 
 exports.Prisma.StoreOrderByRelevanceFieldEnum = {
-  store_name: 'store_name',
+  storeName: 'storeName',
   address: 'address'
 };
 

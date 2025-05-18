@@ -1501,12 +1501,12 @@ export namespace Prisma {
 
   export type UserAvgAggregateOutputType = {
     id: number | null
-    total_point: number | null
+    totalPoint: number | null
   }
 
   export type UserSumAggregateOutputType = {
     id: number | null
-    total_point: number | null
+    totalPoint: number | null
   }
 
   export type UserMinAggregateOutputType = {
@@ -1514,10 +1514,10 @@ export namespace Prisma {
     name: string | null
     email: string | null
     gender: string | null
-    birth_date: Date | null
+    birthDate: Date | null
     region: string | null
     address: string | null
-    total_point: number | null
+    totalPoint: number | null
     phoneNumber: string | null
   }
 
@@ -1526,10 +1526,10 @@ export namespace Prisma {
     name: string | null
     email: string | null
     gender: string | null
-    birth_date: Date | null
+    birthDate: Date | null
     region: string | null
     address: string | null
-    total_point: number | null
+    totalPoint: number | null
     phoneNumber: string | null
   }
 
@@ -1538,10 +1538,10 @@ export namespace Prisma {
     name: number
     email: number
     gender: number
-    birth_date: number
+    birthDate: number
     region: number
     address: number
-    total_point: number
+    totalPoint: number
     phoneNumber: number
     _all: number
   }
@@ -1549,12 +1549,12 @@ export namespace Prisma {
 
   export type UserAvgAggregateInputType = {
     id?: true
-    total_point?: true
+    totalPoint?: true
   }
 
   export type UserSumAggregateInputType = {
     id?: true
-    total_point?: true
+    totalPoint?: true
   }
 
   export type UserMinAggregateInputType = {
@@ -1562,10 +1562,10 @@ export namespace Prisma {
     name?: true
     email?: true
     gender?: true
-    birth_date?: true
+    birthDate?: true
     region?: true
     address?: true
-    total_point?: true
+    totalPoint?: true
     phoneNumber?: true
   }
 
@@ -1574,10 +1574,10 @@ export namespace Prisma {
     name?: true
     email?: true
     gender?: true
-    birth_date?: true
+    birthDate?: true
     region?: true
     address?: true
-    total_point?: true
+    totalPoint?: true
     phoneNumber?: true
   }
 
@@ -1586,10 +1586,10 @@ export namespace Prisma {
     name?: true
     email?: true
     gender?: true
-    birth_date?: true
+    birthDate?: true
     region?: true
     address?: true
-    total_point?: true
+    totalPoint?: true
     phoneNumber?: true
     _all?: true
   }
@@ -1685,10 +1685,10 @@ export namespace Prisma {
     name: string
     email: string
     gender: string
-    birth_date: Date
+    birthDate: Date
     region: string
     address: string
-    total_point: number | null
+    totalPoint: number | null
     phoneNumber: string
     _count: UserCountAggregateOutputType | null
     _avg: UserAvgAggregateOutputType | null
@@ -1716,10 +1716,10 @@ export namespace Prisma {
     name?: boolean
     email?: boolean
     gender?: boolean
-    birth_date?: boolean
+    birthDate?: boolean
     region?: boolean
     address?: boolean
-    total_point?: boolean
+    totalPoint?: boolean
     phoneNumber?: boolean
     missions?: boolean | User$missionsArgs<ExtArgs>
     reviews?: boolean | User$reviewsArgs<ExtArgs>
@@ -1734,14 +1734,14 @@ export namespace Prisma {
     name?: boolean
     email?: boolean
     gender?: boolean
-    birth_date?: boolean
+    birthDate?: boolean
     region?: boolean
     address?: boolean
-    total_point?: boolean
+    totalPoint?: boolean
     phoneNumber?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "gender" | "birth_date" | "region" | "address" | "total_point" | "phoneNumber", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "email" | "gender" | "birthDate" | "region" | "address" | "totalPoint" | "phoneNumber", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     missions?: boolean | User$missionsArgs<ExtArgs>
     reviews?: boolean | User$reviewsArgs<ExtArgs>
@@ -1761,10 +1761,10 @@ export namespace Prisma {
       name: string
       email: string
       gender: string
-      birth_date: Date
+      birthDate: Date
       region: string
       address: string
-      total_point: number | null
+      totalPoint: number | null
       phoneNumber: string
     }, ExtArgs["result"]["user"]>
     composites: {}
@@ -2142,10 +2142,10 @@ export namespace Prisma {
     readonly name: FieldRef<"User", 'String'>
     readonly email: FieldRef<"User", 'String'>
     readonly gender: FieldRef<"User", 'String'>
-    readonly birth_date: FieldRef<"User", 'DateTime'>
+    readonly birthDate: FieldRef<"User", 'DateTime'>
     readonly region: FieldRef<"User", 'String'>
     readonly address: FieldRef<"User", 'String'>
-    readonly total_point: FieldRef<"User", 'Int'>
+    readonly totalPoint: FieldRef<"User", 'Int'>
     readonly phoneNumber: FieldRef<"User", 'String'>
   }
     
@@ -2594,88 +2594,88 @@ export namespace Prisma {
 
   export type StoreAvgAggregateOutputType = {
     id: number | null
-    verifcation_id: number | null
-    food_type_id: number | null
+    verifcationId: number | null
+    foodTypeId: number | null
   }
 
   export type StoreSumAggregateOutputType = {
     id: number | null
-    verifcation_id: number | null
-    food_type_id: number | null
+    verifcationId: number | null
+    foodTypeId: number | null
   }
 
   export type StoreMinAggregateOutputType = {
     id: number | null
-    store_name: string | null
-    verifcation_id: number | null
-    open_time: Date | null
-    close_time: Date | null
+    storeName: string | null
+    verifcationId: number | null
+    openTime: Date | null
+    closeTime: Date | null
     address: string | null
-    food_type_id: number | null
+    foodTypeId: number | null
   }
 
   export type StoreMaxAggregateOutputType = {
     id: number | null
-    store_name: string | null
-    verifcation_id: number | null
-    open_time: Date | null
-    close_time: Date | null
+    storeName: string | null
+    verifcationId: number | null
+    openTime: Date | null
+    closeTime: Date | null
     address: string | null
-    food_type_id: number | null
+    foodTypeId: number | null
   }
 
   export type StoreCountAggregateOutputType = {
     id: number
-    store_name: number
-    verifcation_id: number
-    open_time: number
-    close_time: number
+    storeName: number
+    verifcationId: number
+    openTime: number
+    closeTime: number
     address: number
-    food_type_id: number
+    foodTypeId: number
     _all: number
   }
 
 
   export type StoreAvgAggregateInputType = {
     id?: true
-    verifcation_id?: true
-    food_type_id?: true
+    verifcationId?: true
+    foodTypeId?: true
   }
 
   export type StoreSumAggregateInputType = {
     id?: true
-    verifcation_id?: true
-    food_type_id?: true
+    verifcationId?: true
+    foodTypeId?: true
   }
 
   export type StoreMinAggregateInputType = {
     id?: true
-    store_name?: true
-    verifcation_id?: true
-    open_time?: true
-    close_time?: true
+    storeName?: true
+    verifcationId?: true
+    openTime?: true
+    closeTime?: true
     address?: true
-    food_type_id?: true
+    foodTypeId?: true
   }
 
   export type StoreMaxAggregateInputType = {
     id?: true
-    store_name?: true
-    verifcation_id?: true
-    open_time?: true
-    close_time?: true
+    storeName?: true
+    verifcationId?: true
+    openTime?: true
+    closeTime?: true
     address?: true
-    food_type_id?: true
+    foodTypeId?: true
   }
 
   export type StoreCountAggregateInputType = {
     id?: true
-    store_name?: true
-    verifcation_id?: true
-    open_time?: true
-    close_time?: true
+    storeName?: true
+    verifcationId?: true
+    openTime?: true
+    closeTime?: true
     address?: true
-    food_type_id?: true
+    foodTypeId?: true
     _all?: true
   }
 
@@ -2767,12 +2767,12 @@ export namespace Prisma {
 
   export type StoreGroupByOutputType = {
     id: number
-    store_name: string
-    verifcation_id: number
-    open_time: Date | null
-    close_time: Date | null
+    storeName: string
+    verifcationId: number
+    openTime: Date | null
+    closeTime: Date | null
     address: string
-    food_type_id: number | null
+    foodTypeId: number | null
     _count: StoreCountAggregateOutputType | null
     _avg: StoreAvgAggregateOutputType | null
     _sum: StoreSumAggregateOutputType | null
@@ -2796,12 +2796,12 @@ export namespace Prisma {
 
   export type StoreSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    store_name?: boolean
-    verifcation_id?: boolean
-    open_time?: boolean
-    close_time?: boolean
+    storeName?: boolean
+    verifcationId?: boolean
+    openTime?: boolean
+    closeTime?: boolean
     address?: boolean
-    food_type_id?: boolean
+    foodTypeId?: boolean
     foodType?: boolean | Store$foodTypeArgs<ExtArgs>
     missions?: boolean | Store$missionsArgs<ExtArgs>
     reviews?: boolean | Store$reviewsArgs<ExtArgs>
@@ -2813,15 +2813,15 @@ export namespace Prisma {
 
   export type StoreSelectScalar = {
     id?: boolean
-    store_name?: boolean
-    verifcation_id?: boolean
-    open_time?: boolean
-    close_time?: boolean
+    storeName?: boolean
+    verifcationId?: boolean
+    openTime?: boolean
+    closeTime?: boolean
     address?: boolean
-    food_type_id?: boolean
+    foodTypeId?: boolean
   }
 
-  export type StoreOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "store_name" | "verifcation_id" | "open_time" | "close_time" | "address" | "food_type_id", ExtArgs["result"]["store"]>
+  export type StoreOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "storeName" | "verifcationId" | "openTime" | "closeTime" | "address" | "foodTypeId", ExtArgs["result"]["store"]>
   export type StoreInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     foodType?: boolean | Store$foodTypeArgs<ExtArgs>
     missions?: boolean | Store$missionsArgs<ExtArgs>
@@ -2840,12 +2840,12 @@ export namespace Prisma {
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      store_name: string
-      verifcation_id: number
-      open_time: Date | null
-      close_time: Date | null
+      storeName: string
+      verifcationId: number
+      openTime: Date | null
+      closeTime: Date | null
       address: string
-      food_type_id: number | null
+      foodTypeId: number | null
     }, ExtArgs["result"]["store"]>
     composites: {}
   }
@@ -3220,12 +3220,12 @@ export namespace Prisma {
    */
   interface StoreFieldRefs {
     readonly id: FieldRef<"Store", 'Int'>
-    readonly store_name: FieldRef<"Store", 'String'>
-    readonly verifcation_id: FieldRef<"Store", 'Int'>
-    readonly open_time: FieldRef<"Store", 'DateTime'>
-    readonly close_time: FieldRef<"Store", 'DateTime'>
+    readonly storeName: FieldRef<"Store", 'String'>
+    readonly verifcationId: FieldRef<"Store", 'Int'>
+    readonly openTime: FieldRef<"Store", 'DateTime'>
+    readonly closeTime: FieldRef<"Store", 'DateTime'>
     readonly address: FieldRef<"Store", 'String'>
-    readonly food_type_id: FieldRef<"Store", 'Int'>
+    readonly foodTypeId: FieldRef<"Store", 'Int'>
   }
     
 
@@ -4671,33 +4671,33 @@ export namespace Prisma {
 
   export type FoodAvgAggregateOutputType = {
     id: number | null
-    store_id: number | null
+    storeId: number | null
     price: number | null
   }
 
   export type FoodSumAggregateOutputType = {
     id: number | null
-    store_id: number | null
+    storeId: number | null
     price: number | null
   }
 
   export type FoodMinAggregateOutputType = {
     id: number | null
-    store_id: number | null
+    storeId: number | null
     price: number | null
     name: string | null
   }
 
   export type FoodMaxAggregateOutputType = {
     id: number | null
-    store_id: number | null
+    storeId: number | null
     price: number | null
     name: string | null
   }
 
   export type FoodCountAggregateOutputType = {
     id: number
-    store_id: number
+    storeId: number
     price: number
     name: number
     _all: number
@@ -4706,33 +4706,33 @@ export namespace Prisma {
 
   export type FoodAvgAggregateInputType = {
     id?: true
-    store_id?: true
+    storeId?: true
     price?: true
   }
 
   export type FoodSumAggregateInputType = {
     id?: true
-    store_id?: true
+    storeId?: true
     price?: true
   }
 
   export type FoodMinAggregateInputType = {
     id?: true
-    store_id?: true
+    storeId?: true
     price?: true
     name?: true
   }
 
   export type FoodMaxAggregateInputType = {
     id?: true
-    store_id?: true
+    storeId?: true
     price?: true
     name?: true
   }
 
   export type FoodCountAggregateInputType = {
     id?: true
-    store_id?: true
+    storeId?: true
     price?: true
     name?: true
     _all?: true
@@ -4826,7 +4826,7 @@ export namespace Prisma {
 
   export type FoodGroupByOutputType = {
     id: number
-    store_id: number
+    storeId: number
     price: number
     name: string
     _count: FoodCountAggregateOutputType | null
@@ -4852,7 +4852,7 @@ export namespace Prisma {
 
   export type FoodSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    store_id?: boolean
+    storeId?: boolean
     price?: boolean
     name?: boolean
     store?: boolean | StoreDefaultArgs<ExtArgs>
@@ -4862,12 +4862,12 @@ export namespace Prisma {
 
   export type FoodSelectScalar = {
     id?: boolean
-    store_id?: boolean
+    storeId?: boolean
     price?: boolean
     name?: boolean
   }
 
-  export type FoodOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "store_id" | "price" | "name", ExtArgs["result"]["food"]>
+  export type FoodOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "storeId" | "price" | "name", ExtArgs["result"]["food"]>
   export type FoodInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     store?: boolean | StoreDefaultArgs<ExtArgs>
   }
@@ -4879,7 +4879,7 @@ export namespace Prisma {
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      store_id: number
+      storeId: number
       price: number
       name: string
     }, ExtArgs["result"]["food"]>
@@ -5253,7 +5253,7 @@ export namespace Prisma {
    */
   interface FoodFieldRefs {
     readonly id: FieldRef<"Food", 'Int'>
-    readonly store_id: FieldRef<"Food", 'Int'>
+    readonly storeId: FieldRef<"Food", 'Int'>
     readonly price: FieldRef<"Food", 'Int'>
     readonly name: FieldRef<"Food", 'String'>
   }
@@ -5630,55 +5630,55 @@ export namespace Prisma {
   }
 
   export type UserFoodDbAvgAggregateOutputType = {
-    user_id: number | null
-    food_id: number | null
+    userId: number | null
+    foodId: number | null
   }
 
   export type UserFoodDbSumAggregateOutputType = {
-    user_id: number | null
-    food_id: number | null
+    userId: number | null
+    foodId: number | null
   }
 
   export type UserFoodDbMinAggregateOutputType = {
-    user_id: number | null
-    food_id: number | null
+    userId: number | null
+    foodId: number | null
   }
 
   export type UserFoodDbMaxAggregateOutputType = {
-    user_id: number | null
-    food_id: number | null
+    userId: number | null
+    foodId: number | null
   }
 
   export type UserFoodDbCountAggregateOutputType = {
-    user_id: number
-    food_id: number
+    userId: number
+    foodId: number
     _all: number
   }
 
 
   export type UserFoodDbAvgAggregateInputType = {
-    user_id?: true
-    food_id?: true
+    userId?: true
+    foodId?: true
   }
 
   export type UserFoodDbSumAggregateInputType = {
-    user_id?: true
-    food_id?: true
+    userId?: true
+    foodId?: true
   }
 
   export type UserFoodDbMinAggregateInputType = {
-    user_id?: true
-    food_id?: true
+    userId?: true
+    foodId?: true
   }
 
   export type UserFoodDbMaxAggregateInputType = {
-    user_id?: true
-    food_id?: true
+    userId?: true
+    foodId?: true
   }
 
   export type UserFoodDbCountAggregateInputType = {
-    user_id?: true
-    food_id?: true
+    userId?: true
+    foodId?: true
     _all?: true
   }
 
@@ -5769,8 +5769,8 @@ export namespace Prisma {
   }
 
   export type UserFoodDbGroupByOutputType = {
-    user_id: number
-    food_id: number
+    userId: number
+    foodId: number
     _count: UserFoodDbCountAggregateOutputType | null
     _avg: UserFoodDbAvgAggregateOutputType | null
     _sum: UserFoodDbSumAggregateOutputType | null
@@ -5793,8 +5793,8 @@ export namespace Prisma {
 
 
   export type UserFoodDbSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    user_id?: boolean
-    food_id?: boolean
+    userId?: boolean
+    foodId?: boolean
     user?: boolean | UserDefaultArgs<ExtArgs>
     foodType?: boolean | FoodTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["userFoodDb"]>
@@ -5802,11 +5802,11 @@ export namespace Prisma {
 
 
   export type UserFoodDbSelectScalar = {
-    user_id?: boolean
-    food_id?: boolean
+    userId?: boolean
+    foodId?: boolean
   }
 
-  export type UserFoodDbOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"user_id" | "food_id", ExtArgs["result"]["userFoodDb"]>
+  export type UserFoodDbOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"userId" | "foodId", ExtArgs["result"]["userFoodDb"]>
   export type UserFoodDbInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
     foodType?: boolean | FoodTypeDefaultArgs<ExtArgs>
@@ -5819,8 +5819,8 @@ export namespace Prisma {
       foodType: Prisma.$FoodTypePayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
-      user_id: number
-      food_id: number
+      userId: number
+      foodId: number
     }, ExtArgs["result"]["userFoodDb"]>
     composites: {}
   }
@@ -5904,8 +5904,8 @@ export namespace Prisma {
      * // Get first 10 UserFoodDbs
      * const userFoodDbs = await prisma.userFoodDb.findMany({ take: 10 })
      * 
-     * // Only select the `user_id`
-     * const userFoodDbWithUser_idOnly = await prisma.userFoodDb.findMany({ select: { user_id: true } })
+     * // Only select the `userId`
+     * const userFoodDbWithUserIdOnly = await prisma.userFoodDb.findMany({ select: { userId: true } })
      * 
      */
     findMany<T extends UserFoodDbFindManyArgs>(args?: SelectSubset<T, UserFoodDbFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserFoodDbPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
@@ -6192,8 +6192,8 @@ export namespace Prisma {
    * Fields of the UserFoodDb model
    */
   interface UserFoodDbFieldRefs {
-    readonly user_id: FieldRef<"UserFoodDb", 'Int'>
-    readonly food_id: FieldRef<"UserFoodDb", 'Int'>
+    readonly userId: FieldRef<"UserFoodDb", 'Int'>
+    readonly foodId: FieldRef<"UserFoodDb", 'Int'>
   }
     
 
@@ -6569,16 +6569,16 @@ export namespace Prisma {
 
   export type MissionAvgAggregateOutputType = {
     id: number | null
-    store_id: number | null
+    storeId: number | null
     point: number | null
-    user_id: number | null
+    userId: number | null
   }
 
   export type MissionSumAggregateOutputType = {
     id: number | null
-    store_id: number | null
+    storeId: number | null
     point: number | null
-    user_id: number | null
+    userId: number | null
   }
 
   export type MissionMinAggregateOutputType = {
@@ -6586,11 +6586,11 @@ export namespace Prisma {
     status: string | null
     content: string | null
     deadline: Date | null
-    created_at: Date | null
-    updated_at: Date | null
-    store_id: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+    storeId: number | null
     point: number | null
-    user_id: number | null
+    userId: number | null
   }
 
   export type MissionMaxAggregateOutputType = {
@@ -6598,11 +6598,11 @@ export namespace Prisma {
     status: string | null
     content: string | null
     deadline: Date | null
-    created_at: Date | null
-    updated_at: Date | null
-    store_id: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
+    storeId: number | null
     point: number | null
-    user_id: number | null
+    userId: number | null
   }
 
   export type MissionCountAggregateOutputType = {
@@ -6610,27 +6610,27 @@ export namespace Prisma {
     status: number
     content: number
     deadline: number
-    created_at: number
-    updated_at: number
-    store_id: number
+    createdAt: number
+    updatedAt: number
+    storeId: number
     point: number
-    user_id: number
+    userId: number
     _all: number
   }
 
 
   export type MissionAvgAggregateInputType = {
     id?: true
-    store_id?: true
+    storeId?: true
     point?: true
-    user_id?: true
+    userId?: true
   }
 
   export type MissionSumAggregateInputType = {
     id?: true
-    store_id?: true
+    storeId?: true
     point?: true
-    user_id?: true
+    userId?: true
   }
 
   export type MissionMinAggregateInputType = {
@@ -6638,11 +6638,11 @@ export namespace Prisma {
     status?: true
     content?: true
     deadline?: true
-    created_at?: true
-    updated_at?: true
-    store_id?: true
+    createdAt?: true
+    updatedAt?: true
+    storeId?: true
     point?: true
-    user_id?: true
+    userId?: true
   }
 
   export type MissionMaxAggregateInputType = {
@@ -6650,11 +6650,11 @@ export namespace Prisma {
     status?: true
     content?: true
     deadline?: true
-    created_at?: true
-    updated_at?: true
-    store_id?: true
+    createdAt?: true
+    updatedAt?: true
+    storeId?: true
     point?: true
-    user_id?: true
+    userId?: true
   }
 
   export type MissionCountAggregateInputType = {
@@ -6662,11 +6662,11 @@ export namespace Prisma {
     status?: true
     content?: true
     deadline?: true
-    created_at?: true
-    updated_at?: true
-    store_id?: true
+    createdAt?: true
+    updatedAt?: true
+    storeId?: true
     point?: true
-    user_id?: true
+    userId?: true
     _all?: true
   }
 
@@ -6761,11 +6761,11 @@ export namespace Prisma {
     status: string
     content: string
     deadline: Date
-    created_at: Date | null
-    updated_at: Date | null
-    store_id: number
+    createdAt: Date | null
+    updatedAt: Date | null
+    storeId: number
     point: number
-    user_id: number | null
+    userId: number | null
     _count: MissionCountAggregateOutputType | null
     _avg: MissionAvgAggregateOutputType | null
     _sum: MissionSumAggregateOutputType | null
@@ -6792,11 +6792,11 @@ export namespace Prisma {
     status?: boolean
     content?: boolean
     deadline?: boolean
-    created_at?: boolean
-    updated_at?: boolean
-    store_id?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    storeId?: boolean
     point?: boolean
-    user_id?: boolean
+    userId?: boolean
     store?: boolean | StoreDefaultArgs<ExtArgs>
     user?: boolean | Mission$userArgs<ExtArgs>
   }, ExtArgs["result"]["mission"]>
@@ -6808,14 +6808,14 @@ export namespace Prisma {
     status?: boolean
     content?: boolean
     deadline?: boolean
-    created_at?: boolean
-    updated_at?: boolean
-    store_id?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    storeId?: boolean
     point?: boolean
-    user_id?: boolean
+    userId?: boolean
   }
 
-  export type MissionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "status" | "content" | "deadline" | "created_at" | "updated_at" | "store_id" | "point" | "user_id", ExtArgs["result"]["mission"]>
+  export type MissionOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "status" | "content" | "deadline" | "createdAt" | "updatedAt" | "storeId" | "point" | "userId", ExtArgs["result"]["mission"]>
   export type MissionInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     store?: boolean | StoreDefaultArgs<ExtArgs>
     user?: boolean | Mission$userArgs<ExtArgs>
@@ -6832,11 +6832,11 @@ export namespace Prisma {
       status: string
       content: string
       deadline: Date
-      created_at: Date | null
-      updated_at: Date | null
-      store_id: number
+      createdAt: Date | null
+      updatedAt: Date | null
+      storeId: number
       point: number
-      user_id: number | null
+      userId: number | null
     }, ExtArgs["result"]["mission"]>
     composites: {}
   }
@@ -7212,11 +7212,11 @@ export namespace Prisma {
     readonly status: FieldRef<"Mission", 'String'>
     readonly content: FieldRef<"Mission", 'String'>
     readonly deadline: FieldRef<"Mission", 'DateTime'>
-    readonly created_at: FieldRef<"Mission", 'DateTime'>
-    readonly updated_at: FieldRef<"Mission", 'DateTime'>
-    readonly store_id: FieldRef<"Mission", 'Int'>
+    readonly createdAt: FieldRef<"Mission", 'DateTime'>
+    readonly updatedAt: FieldRef<"Mission", 'DateTime'>
+    readonly storeId: FieldRef<"Mission", 'Int'>
     readonly point: FieldRef<"Mission", 'Int'>
-    readonly user_id: FieldRef<"Mission", 'Int'>
+    readonly userId: FieldRef<"Mission", 'Int'>
   }
     
 
@@ -7612,45 +7612,45 @@ export namespace Prisma {
   export type ReviewAvgAggregateOutputType = {
     id: number | null
     rating: number | null
-    user_id: number | null
-    store_id: number | null
+    userId: number | null
+    storeId: number | null
   }
 
   export type ReviewSumAggregateOutputType = {
     id: number | null
     rating: number | null
-    user_id: number | null
-    store_id: number | null
+    userId: number | null
+    storeId: number | null
   }
 
   export type ReviewMinAggregateOutputType = {
     id: number | null
     text: string | null
     rating: number | null
-    user_id: number | null
-    store_id: number | null
-    created_at: Date | null
-    updated_at: Date | null
+    userId: number | null
+    storeId: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type ReviewMaxAggregateOutputType = {
     id: number | null
     text: string | null
     rating: number | null
-    user_id: number | null
-    store_id: number | null
-    created_at: Date | null
-    updated_at: Date | null
+    userId: number | null
+    storeId: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type ReviewCountAggregateOutputType = {
     id: number
     text: number
     rating: number
-    user_id: number
-    store_id: number
-    created_at: number
-    updated_at: number
+    userId: number
+    storeId: number
+    createdAt: number
+    updatedAt: number
     _all: number
   }
 
@@ -7658,45 +7658,45 @@ export namespace Prisma {
   export type ReviewAvgAggregateInputType = {
     id?: true
     rating?: true
-    user_id?: true
-    store_id?: true
+    userId?: true
+    storeId?: true
   }
 
   export type ReviewSumAggregateInputType = {
     id?: true
     rating?: true
-    user_id?: true
-    store_id?: true
+    userId?: true
+    storeId?: true
   }
 
   export type ReviewMinAggregateInputType = {
     id?: true
     text?: true
     rating?: true
-    user_id?: true
-    store_id?: true
-    created_at?: true
-    updated_at?: true
+    userId?: true
+    storeId?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type ReviewMaxAggregateInputType = {
     id?: true
     text?: true
     rating?: true
-    user_id?: true
-    store_id?: true
-    created_at?: true
-    updated_at?: true
+    userId?: true
+    storeId?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type ReviewCountAggregateInputType = {
     id?: true
     text?: true
     rating?: true
-    user_id?: true
-    store_id?: true
-    created_at?: true
-    updated_at?: true
+    userId?: true
+    storeId?: true
+    createdAt?: true
+    updatedAt?: true
     _all?: true
   }
 
@@ -7790,10 +7790,10 @@ export namespace Prisma {
     id: number
     text: string
     rating: number
-    user_id: number | null
-    store_id: number | null
-    created_at: Date | null
-    updated_at: Date | null
+    userId: number | null
+    storeId: number | null
+    createdAt: Date | null
+    updatedAt: Date | null
     _count: ReviewCountAggregateOutputType | null
     _avg: ReviewAvgAggregateOutputType | null
     _sum: ReviewSumAggregateOutputType | null
@@ -7819,10 +7819,10 @@ export namespace Prisma {
     id?: boolean
     text?: boolean
     rating?: boolean
-    user_id?: boolean
-    store_id?: boolean
-    created_at?: boolean
-    updated_at?: boolean
+    userId?: boolean
+    storeId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
     user?: boolean | Review$userArgs<ExtArgs>
     store?: boolean | Review$storeArgs<ExtArgs>
   }, ExtArgs["result"]["review"]>
@@ -7833,13 +7833,13 @@ export namespace Prisma {
     id?: boolean
     text?: boolean
     rating?: boolean
-    user_id?: boolean
-    store_id?: boolean
-    created_at?: boolean
-    updated_at?: boolean
+    userId?: boolean
+    storeId?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }
 
-  export type ReviewOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "text" | "rating" | "user_id" | "store_id" | "created_at" | "updated_at", ExtArgs["result"]["review"]>
+  export type ReviewOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "text" | "rating" | "userId" | "storeId" | "createdAt" | "updatedAt", ExtArgs["result"]["review"]>
   export type ReviewInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | Review$userArgs<ExtArgs>
     store?: boolean | Review$storeArgs<ExtArgs>
@@ -7855,10 +7855,10 @@ export namespace Prisma {
       id: number
       text: string
       rating: number
-      user_id: number | null
-      store_id: number | null
-      created_at: Date | null
-      updated_at: Date | null
+      userId: number | null
+      storeId: number | null
+      createdAt: Date | null
+      updatedAt: Date | null
     }, ExtArgs["result"]["review"]>
     composites: {}
   }
@@ -8233,10 +8233,10 @@ export namespace Prisma {
     readonly id: FieldRef<"Review", 'Int'>
     readonly text: FieldRef<"Review", 'String'>
     readonly rating: FieldRef<"Review", 'Int'>
-    readonly user_id: FieldRef<"Review", 'Int'>
-    readonly store_id: FieldRef<"Review", 'Int'>
-    readonly created_at: FieldRef<"Review", 'DateTime'>
-    readonly updated_at: FieldRef<"Review", 'DateTime'>
+    readonly userId: FieldRef<"Review", 'Int'>
+    readonly storeId: FieldRef<"Review", 'Int'>
+    readonly createdAt: FieldRef<"Review", 'DateTime'>
+    readonly updatedAt: FieldRef<"Review", 'DateTime'>
   }
     
 
@@ -8655,10 +8655,10 @@ export namespace Prisma {
     name: 'name',
     email: 'email',
     gender: 'gender',
-    birth_date: 'birth_date',
+    birthDate: 'birthDate',
     region: 'region',
     address: 'address',
-    total_point: 'total_point',
+    totalPoint: 'totalPoint',
     phoneNumber: 'phoneNumber'
   };
 
@@ -8667,12 +8667,12 @@ export namespace Prisma {
 
   export const StoreScalarFieldEnum: {
     id: 'id',
-    store_name: 'store_name',
-    verifcation_id: 'verifcation_id',
-    open_time: 'open_time',
-    close_time: 'close_time',
+    storeName: 'storeName',
+    verifcationId: 'verifcationId',
+    openTime: 'openTime',
+    closeTime: 'closeTime',
     address: 'address',
-    food_type_id: 'food_type_id'
+    foodTypeId: 'foodTypeId'
   };
 
   export type StoreScalarFieldEnum = (typeof StoreScalarFieldEnum)[keyof typeof StoreScalarFieldEnum]
@@ -8688,7 +8688,7 @@ export namespace Prisma {
 
   export const FoodScalarFieldEnum: {
     id: 'id',
-    store_id: 'store_id',
+    storeId: 'storeId',
     price: 'price',
     name: 'name'
   };
@@ -8697,8 +8697,8 @@ export namespace Prisma {
 
 
   export const UserFoodDbScalarFieldEnum: {
-    user_id: 'user_id',
-    food_id: 'food_id'
+    userId: 'userId',
+    foodId: 'foodId'
   };
 
   export type UserFoodDbScalarFieldEnum = (typeof UserFoodDbScalarFieldEnum)[keyof typeof UserFoodDbScalarFieldEnum]
@@ -8709,11 +8709,11 @@ export namespace Prisma {
     status: 'status',
     content: 'content',
     deadline: 'deadline',
-    created_at: 'created_at',
-    updated_at: 'updated_at',
-    store_id: 'store_id',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt',
+    storeId: 'storeId',
     point: 'point',
-    user_id: 'user_id'
+    userId: 'userId'
   };
 
   export type MissionScalarFieldEnum = (typeof MissionScalarFieldEnum)[keyof typeof MissionScalarFieldEnum]
@@ -8723,10 +8723,10 @@ export namespace Prisma {
     id: 'id',
     text: 'text',
     rating: 'rating',
-    user_id: 'user_id',
-    store_id: 'store_id',
-    created_at: 'created_at',
-    updated_at: 'updated_at'
+    userId: 'userId',
+    storeId: 'storeId',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
   };
 
   export type ReviewScalarFieldEnum = (typeof ReviewScalarFieldEnum)[keyof typeof ReviewScalarFieldEnum]
@@ -8761,7 +8761,7 @@ export namespace Prisma {
 
 
   export const StoreOrderByRelevanceFieldEnum: {
-    store_name: 'store_name',
+    storeName: 'storeName',
     address: 'address'
   };
 
@@ -8841,10 +8841,10 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     email?: StringFilter<"User"> | string
     gender?: StringFilter<"User"> | string
-    birth_date?: DateTimeFilter<"User"> | Date | string
+    birthDate?: DateTimeFilter<"User"> | Date | string
     region?: StringFilter<"User"> | string
     address?: StringFilter<"User"> | string
-    total_point?: IntNullableFilter<"User"> | number | null
+    totalPoint?: IntNullableFilter<"User"> | number | null
     phoneNumber?: StringFilter<"User"> | string
     missions?: MissionListRelationFilter
     reviews?: ReviewListRelationFilter
@@ -8856,10 +8856,10 @@ export namespace Prisma {
     name?: SortOrder
     email?: SortOrder
     gender?: SortOrder
-    birth_date?: SortOrder
+    birthDate?: SortOrder
     region?: SortOrder
     address?: SortOrder
-    total_point?: SortOrderInput | SortOrder
+    totalPoint?: SortOrderInput | SortOrder
     phoneNumber?: SortOrder
     missions?: MissionOrderByRelationAggregateInput
     reviews?: ReviewOrderByRelationAggregateInput
@@ -8875,10 +8875,10 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     email?: StringFilter<"User"> | string
     gender?: StringFilter<"User"> | string
-    birth_date?: DateTimeFilter<"User"> | Date | string
+    birthDate?: DateTimeFilter<"User"> | Date | string
     region?: StringFilter<"User"> | string
     address?: StringFilter<"User"> | string
-    total_point?: IntNullableFilter<"User"> | number | null
+    totalPoint?: IntNullableFilter<"User"> | number | null
     phoneNumber?: StringFilter<"User"> | string
     missions?: MissionListRelationFilter
     reviews?: ReviewListRelationFilter
@@ -8890,10 +8890,10 @@ export namespace Prisma {
     name?: SortOrder
     email?: SortOrder
     gender?: SortOrder
-    birth_date?: SortOrder
+    birthDate?: SortOrder
     region?: SortOrder
     address?: SortOrder
-    total_point?: SortOrderInput | SortOrder
+    totalPoint?: SortOrderInput | SortOrder
     phoneNumber?: SortOrder
     _count?: UserCountOrderByAggregateInput
     _avg?: UserAvgOrderByAggregateInput
@@ -8910,10 +8910,10 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"User"> | string
     email?: StringWithAggregatesFilter<"User"> | string
     gender?: StringWithAggregatesFilter<"User"> | string
-    birth_date?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    birthDate?: DateTimeWithAggregatesFilter<"User"> | Date | string
     region?: StringWithAggregatesFilter<"User"> | string
     address?: StringWithAggregatesFilter<"User"> | string
-    total_point?: IntNullableWithAggregatesFilter<"User"> | number | null
+    totalPoint?: IntNullableWithAggregatesFilter<"User"> | number | null
     phoneNumber?: StringWithAggregatesFilter<"User"> | string
   }
 
@@ -8922,12 +8922,12 @@ export namespace Prisma {
     OR?: StoreWhereInput[]
     NOT?: StoreWhereInput | StoreWhereInput[]
     id?: IntFilter<"Store"> | number
-    store_name?: StringFilter<"Store"> | string
-    verifcation_id?: IntFilter<"Store"> | number
-    open_time?: DateTimeNullableFilter<"Store"> | Date | string | null
-    close_time?: DateTimeNullableFilter<"Store"> | Date | string | null
+    storeName?: StringFilter<"Store"> | string
+    verifcationId?: IntFilter<"Store"> | number
+    openTime?: DateTimeNullableFilter<"Store"> | Date | string | null
+    closeTime?: DateTimeNullableFilter<"Store"> | Date | string | null
     address?: StringFilter<"Store"> | string
-    food_type_id?: IntNullableFilter<"Store"> | number | null
+    foodTypeId?: IntNullableFilter<"Store"> | number | null
     foodType?: XOR<FoodTypeNullableScalarRelationFilter, FoodTypeWhereInput> | null
     missions?: MissionListRelationFilter
     reviews?: ReviewListRelationFilter
@@ -8936,12 +8936,12 @@ export namespace Prisma {
 
   export type StoreOrderByWithRelationInput = {
     id?: SortOrder
-    store_name?: SortOrder
-    verifcation_id?: SortOrder
-    open_time?: SortOrderInput | SortOrder
-    close_time?: SortOrderInput | SortOrder
+    storeName?: SortOrder
+    verifcationId?: SortOrder
+    openTime?: SortOrderInput | SortOrder
+    closeTime?: SortOrderInput | SortOrder
     address?: SortOrder
-    food_type_id?: SortOrderInput | SortOrder
+    foodTypeId?: SortOrderInput | SortOrder
     foodType?: FoodTypeOrderByWithRelationInput
     missions?: MissionOrderByRelationAggregateInput
     reviews?: ReviewOrderByRelationAggregateInput
@@ -8951,29 +8951,29 @@ export namespace Prisma {
 
   export type StoreWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    food_type_id?: number
+    foodTypeId?: number
     AND?: StoreWhereInput | StoreWhereInput[]
     OR?: StoreWhereInput[]
     NOT?: StoreWhereInput | StoreWhereInput[]
-    store_name?: StringFilter<"Store"> | string
-    verifcation_id?: IntFilter<"Store"> | number
-    open_time?: DateTimeNullableFilter<"Store"> | Date | string | null
-    close_time?: DateTimeNullableFilter<"Store"> | Date | string | null
+    storeName?: StringFilter<"Store"> | string
+    verifcationId?: IntFilter<"Store"> | number
+    openTime?: DateTimeNullableFilter<"Store"> | Date | string | null
+    closeTime?: DateTimeNullableFilter<"Store"> | Date | string | null
     address?: StringFilter<"Store"> | string
     foodType?: XOR<FoodTypeNullableScalarRelationFilter, FoodTypeWhereInput> | null
     missions?: MissionListRelationFilter
     reviews?: ReviewListRelationFilter
     foods?: FoodListRelationFilter
-  }, "id" | "food_type_id">
+  }, "id" | "foodTypeId">
 
   export type StoreOrderByWithAggregationInput = {
     id?: SortOrder
-    store_name?: SortOrder
-    verifcation_id?: SortOrder
-    open_time?: SortOrderInput | SortOrder
-    close_time?: SortOrderInput | SortOrder
+    storeName?: SortOrder
+    verifcationId?: SortOrder
+    openTime?: SortOrderInput | SortOrder
+    closeTime?: SortOrderInput | SortOrder
     address?: SortOrder
-    food_type_id?: SortOrderInput | SortOrder
+    foodTypeId?: SortOrderInput | SortOrder
     _count?: StoreCountOrderByAggregateInput
     _avg?: StoreAvgOrderByAggregateInput
     _max?: StoreMaxOrderByAggregateInput
@@ -8986,12 +8986,12 @@ export namespace Prisma {
     OR?: StoreScalarWhereWithAggregatesInput[]
     NOT?: StoreScalarWhereWithAggregatesInput | StoreScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Store"> | number
-    store_name?: StringWithAggregatesFilter<"Store"> | string
-    verifcation_id?: IntWithAggregatesFilter<"Store"> | number
-    open_time?: DateTimeNullableWithAggregatesFilter<"Store"> | Date | string | null
-    close_time?: DateTimeNullableWithAggregatesFilter<"Store"> | Date | string | null
+    storeName?: StringWithAggregatesFilter<"Store"> | string
+    verifcationId?: IntWithAggregatesFilter<"Store"> | number
+    openTime?: DateTimeNullableWithAggregatesFilter<"Store"> | Date | string | null
+    closeTime?: DateTimeNullableWithAggregatesFilter<"Store"> | Date | string | null
     address?: StringWithAggregatesFilter<"Store"> | string
-    food_type_id?: IntNullableWithAggregatesFilter<"Store"> | number | null
+    foodTypeId?: IntNullableWithAggregatesFilter<"Store"> | number | null
   }
 
   export type FoodTypeWhereInput = {
@@ -9045,7 +9045,7 @@ export namespace Prisma {
     OR?: FoodWhereInput[]
     NOT?: FoodWhereInput | FoodWhereInput[]
     id?: IntFilter<"Food"> | number
-    store_id?: IntFilter<"Food"> | number
+    storeId?: IntFilter<"Food"> | number
     price?: IntFilter<"Food"> | number
     name?: StringFilter<"Food"> | string
     store?: XOR<StoreScalarRelationFilter, StoreWhereInput>
@@ -9053,7 +9053,7 @@ export namespace Prisma {
 
   export type FoodOrderByWithRelationInput = {
     id?: SortOrder
-    store_id?: SortOrder
+    storeId?: SortOrder
     price?: SortOrder
     name?: SortOrder
     store?: StoreOrderByWithRelationInput
@@ -9065,7 +9065,7 @@ export namespace Prisma {
     AND?: FoodWhereInput | FoodWhereInput[]
     OR?: FoodWhereInput[]
     NOT?: FoodWhereInput | FoodWhereInput[]
-    store_id?: IntFilter<"Food"> | number
+    storeId?: IntFilter<"Food"> | number
     price?: IntFilter<"Food"> | number
     name?: StringFilter<"Food"> | string
     store?: XOR<StoreScalarRelationFilter, StoreWhereInput>
@@ -9073,7 +9073,7 @@ export namespace Prisma {
 
   export type FoodOrderByWithAggregationInput = {
     id?: SortOrder
-    store_id?: SortOrder
+    storeId?: SortOrder
     price?: SortOrder
     name?: SortOrder
     _count?: FoodCountOrderByAggregateInput
@@ -9088,7 +9088,7 @@ export namespace Prisma {
     OR?: FoodScalarWhereWithAggregatesInput[]
     NOT?: FoodScalarWhereWithAggregatesInput | FoodScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Food"> | number
-    store_id?: IntWithAggregatesFilter<"Food"> | number
+    storeId?: IntWithAggregatesFilter<"Food"> | number
     price?: IntWithAggregatesFilter<"Food"> | number
     name?: StringWithAggregatesFilter<"Food"> | string
   }
@@ -9097,33 +9097,33 @@ export namespace Prisma {
     AND?: UserFoodDbWhereInput | UserFoodDbWhereInput[]
     OR?: UserFoodDbWhereInput[]
     NOT?: UserFoodDbWhereInput | UserFoodDbWhereInput[]
-    user_id?: IntFilter<"UserFoodDb"> | number
-    food_id?: IntFilter<"UserFoodDb"> | number
+    userId?: IntFilter<"UserFoodDb"> | number
+    foodId?: IntFilter<"UserFoodDb"> | number
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
     foodType?: XOR<FoodTypeScalarRelationFilter, FoodTypeWhereInput>
   }
 
   export type UserFoodDbOrderByWithRelationInput = {
-    user_id?: SortOrder
-    food_id?: SortOrder
+    userId?: SortOrder
+    foodId?: SortOrder
     user?: UserOrderByWithRelationInput
     foodType?: FoodTypeOrderByWithRelationInput
   }
 
   export type UserFoodDbWhereUniqueInput = Prisma.AtLeast<{
-    user_id_food_id?: UserFoodDbUser_idFood_idCompoundUniqueInput
+    userId_foodId?: UserFoodDbUserIdFoodIdCompoundUniqueInput
     AND?: UserFoodDbWhereInput | UserFoodDbWhereInput[]
     OR?: UserFoodDbWhereInput[]
     NOT?: UserFoodDbWhereInput | UserFoodDbWhereInput[]
-    user_id?: IntFilter<"UserFoodDb"> | number
-    food_id?: IntFilter<"UserFoodDb"> | number
+    userId?: IntFilter<"UserFoodDb"> | number
+    foodId?: IntFilter<"UserFoodDb"> | number
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
     foodType?: XOR<FoodTypeScalarRelationFilter, FoodTypeWhereInput>
-  }, "user_id_food_id">
+  }, "userId_foodId">
 
   export type UserFoodDbOrderByWithAggregationInput = {
-    user_id?: SortOrder
-    food_id?: SortOrder
+    userId?: SortOrder
+    foodId?: SortOrder
     _count?: UserFoodDbCountOrderByAggregateInput
     _avg?: UserFoodDbAvgOrderByAggregateInput
     _max?: UserFoodDbMaxOrderByAggregateInput
@@ -9135,8 +9135,8 @@ export namespace Prisma {
     AND?: UserFoodDbScalarWhereWithAggregatesInput | UserFoodDbScalarWhereWithAggregatesInput[]
     OR?: UserFoodDbScalarWhereWithAggregatesInput[]
     NOT?: UserFoodDbScalarWhereWithAggregatesInput | UserFoodDbScalarWhereWithAggregatesInput[]
-    user_id?: IntWithAggregatesFilter<"UserFoodDb"> | number
-    food_id?: IntWithAggregatesFilter<"UserFoodDb"> | number
+    userId?: IntWithAggregatesFilter<"UserFoodDb"> | number
+    foodId?: IntWithAggregatesFilter<"UserFoodDb"> | number
   }
 
   export type MissionWhereInput = {
@@ -9147,11 +9147,11 @@ export namespace Prisma {
     status?: StringFilter<"Mission"> | string
     content?: StringFilter<"Mission"> | string
     deadline?: DateTimeFilter<"Mission"> | Date | string
-    created_at?: DateTimeNullableFilter<"Mission"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"Mission"> | Date | string | null
-    store_id?: IntFilter<"Mission"> | number
+    createdAt?: DateTimeNullableFilter<"Mission"> | Date | string | null
+    updatedAt?: DateTimeNullableFilter<"Mission"> | Date | string | null
+    storeId?: IntFilter<"Mission"> | number
     point?: IntFilter<"Mission"> | number
-    user_id?: IntNullableFilter<"Mission"> | number | null
+    userId?: IntNullableFilter<"Mission"> | number | null
     store?: XOR<StoreScalarRelationFilter, StoreWhereInput>
     user?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
   }
@@ -9161,11 +9161,11 @@ export namespace Prisma {
     status?: SortOrder
     content?: SortOrder
     deadline?: SortOrder
-    created_at?: SortOrderInput | SortOrder
-    updated_at?: SortOrderInput | SortOrder
-    store_id?: SortOrder
+    createdAt?: SortOrderInput | SortOrder
+    updatedAt?: SortOrderInput | SortOrder
+    storeId?: SortOrder
     point?: SortOrder
-    user_id?: SortOrderInput | SortOrder
+    userId?: SortOrderInput | SortOrder
     store?: StoreOrderByWithRelationInput
     user?: UserOrderByWithRelationInput
     _relevance?: MissionOrderByRelevanceInput
@@ -9179,11 +9179,11 @@ export namespace Prisma {
     status?: StringFilter<"Mission"> | string
     content?: StringFilter<"Mission"> | string
     deadline?: DateTimeFilter<"Mission"> | Date | string
-    created_at?: DateTimeNullableFilter<"Mission"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"Mission"> | Date | string | null
-    store_id?: IntFilter<"Mission"> | number
+    createdAt?: DateTimeNullableFilter<"Mission"> | Date | string | null
+    updatedAt?: DateTimeNullableFilter<"Mission"> | Date | string | null
+    storeId?: IntFilter<"Mission"> | number
     point?: IntFilter<"Mission"> | number
-    user_id?: IntNullableFilter<"Mission"> | number | null
+    userId?: IntNullableFilter<"Mission"> | number | null
     store?: XOR<StoreScalarRelationFilter, StoreWhereInput>
     user?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
   }, "id">
@@ -9193,11 +9193,11 @@ export namespace Prisma {
     status?: SortOrder
     content?: SortOrder
     deadline?: SortOrder
-    created_at?: SortOrderInput | SortOrder
-    updated_at?: SortOrderInput | SortOrder
-    store_id?: SortOrder
+    createdAt?: SortOrderInput | SortOrder
+    updatedAt?: SortOrderInput | SortOrder
+    storeId?: SortOrder
     point?: SortOrder
-    user_id?: SortOrderInput | SortOrder
+    userId?: SortOrderInput | SortOrder
     _count?: MissionCountOrderByAggregateInput
     _avg?: MissionAvgOrderByAggregateInput
     _max?: MissionMaxOrderByAggregateInput
@@ -9213,11 +9213,11 @@ export namespace Prisma {
     status?: StringWithAggregatesFilter<"Mission"> | string
     content?: StringWithAggregatesFilter<"Mission"> | string
     deadline?: DateTimeWithAggregatesFilter<"Mission"> | Date | string
-    created_at?: DateTimeNullableWithAggregatesFilter<"Mission"> | Date | string | null
-    updated_at?: DateTimeNullableWithAggregatesFilter<"Mission"> | Date | string | null
-    store_id?: IntWithAggregatesFilter<"Mission"> | number
+    createdAt?: DateTimeNullableWithAggregatesFilter<"Mission"> | Date | string | null
+    updatedAt?: DateTimeNullableWithAggregatesFilter<"Mission"> | Date | string | null
+    storeId?: IntWithAggregatesFilter<"Mission"> | number
     point?: IntWithAggregatesFilter<"Mission"> | number
-    user_id?: IntNullableWithAggregatesFilter<"Mission"> | number | null
+    userId?: IntNullableWithAggregatesFilter<"Mission"> | number | null
   }
 
   export type ReviewWhereInput = {
@@ -9227,10 +9227,10 @@ export namespace Prisma {
     id?: IntFilter<"Review"> | number
     text?: StringFilter<"Review"> | string
     rating?: IntFilter<"Review"> | number
-    user_id?: IntNullableFilter<"Review"> | number | null
-    store_id?: IntNullableFilter<"Review"> | number | null
-    created_at?: DateTimeNullableFilter<"Review"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"Review"> | Date | string | null
+    userId?: IntNullableFilter<"Review"> | number | null
+    storeId?: IntNullableFilter<"Review"> | number | null
+    createdAt?: DateTimeNullableFilter<"Review"> | Date | string | null
+    updatedAt?: DateTimeNullableFilter<"Review"> | Date | string | null
     user?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
     store?: XOR<StoreNullableScalarRelationFilter, StoreWhereInput> | null
   }
@@ -9239,10 +9239,10 @@ export namespace Prisma {
     id?: SortOrder
     text?: SortOrder
     rating?: SortOrder
-    user_id?: SortOrderInput | SortOrder
-    store_id?: SortOrderInput | SortOrder
-    created_at?: SortOrderInput | SortOrder
-    updated_at?: SortOrderInput | SortOrder
+    userId?: SortOrderInput | SortOrder
+    storeId?: SortOrderInput | SortOrder
+    createdAt?: SortOrderInput | SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     user?: UserOrderByWithRelationInput
     store?: StoreOrderByWithRelationInput
     _relevance?: ReviewOrderByRelevanceInput
@@ -9255,10 +9255,10 @@ export namespace Prisma {
     NOT?: ReviewWhereInput | ReviewWhereInput[]
     text?: StringFilter<"Review"> | string
     rating?: IntFilter<"Review"> | number
-    user_id?: IntNullableFilter<"Review"> | number | null
-    store_id?: IntNullableFilter<"Review"> | number | null
-    created_at?: DateTimeNullableFilter<"Review"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"Review"> | Date | string | null
+    userId?: IntNullableFilter<"Review"> | number | null
+    storeId?: IntNullableFilter<"Review"> | number | null
+    createdAt?: DateTimeNullableFilter<"Review"> | Date | string | null
+    updatedAt?: DateTimeNullableFilter<"Review"> | Date | string | null
     user?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
     store?: XOR<StoreNullableScalarRelationFilter, StoreWhereInput> | null
   }, "id">
@@ -9267,10 +9267,10 @@ export namespace Prisma {
     id?: SortOrder
     text?: SortOrder
     rating?: SortOrder
-    user_id?: SortOrderInput | SortOrder
-    store_id?: SortOrderInput | SortOrder
-    created_at?: SortOrderInput | SortOrder
-    updated_at?: SortOrderInput | SortOrder
+    userId?: SortOrderInput | SortOrder
+    storeId?: SortOrderInput | SortOrder
+    createdAt?: SortOrderInput | SortOrder
+    updatedAt?: SortOrderInput | SortOrder
     _count?: ReviewCountOrderByAggregateInput
     _avg?: ReviewAvgOrderByAggregateInput
     _max?: ReviewMaxOrderByAggregateInput
@@ -9285,20 +9285,20 @@ export namespace Prisma {
     id?: IntWithAggregatesFilter<"Review"> | number
     text?: StringWithAggregatesFilter<"Review"> | string
     rating?: IntWithAggregatesFilter<"Review"> | number
-    user_id?: IntNullableWithAggregatesFilter<"Review"> | number | null
-    store_id?: IntNullableWithAggregatesFilter<"Review"> | number | null
-    created_at?: DateTimeNullableWithAggregatesFilter<"Review"> | Date | string | null
-    updated_at?: DateTimeNullableWithAggregatesFilter<"Review"> | Date | string | null
+    userId?: IntNullableWithAggregatesFilter<"Review"> | number | null
+    storeId?: IntNullableWithAggregatesFilter<"Review"> | number | null
+    createdAt?: DateTimeNullableWithAggregatesFilter<"Review"> | Date | string | null
+    updatedAt?: DateTimeNullableWithAggregatesFilter<"Review"> | Date | string | null
   }
 
   export type UserCreateInput = {
     name: string
     email: string
     gender: string
-    birth_date: Date | string
+    birthDate: Date | string
     region: string
     address: string
-    total_point?: number | null
+    totalPoint?: number | null
     phoneNumber: string
     missions?: MissionCreateNestedManyWithoutUserInput
     reviews?: ReviewCreateNestedManyWithoutUserInput
@@ -9310,10 +9310,10 @@ export namespace Prisma {
     name: string
     email: string
     gender: string
-    birth_date: Date | string
+    birthDate: Date | string
     region: string
     address: string
-    total_point?: number | null
+    totalPoint?: number | null
     phoneNumber: string
     missions?: MissionUncheckedCreateNestedManyWithoutUserInput
     reviews?: ReviewUncheckedCreateNestedManyWithoutUserInput
@@ -9324,10 +9324,10 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     gender?: StringFieldUpdateOperationsInput | string
-    birth_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     region?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
-    total_point?: NullableIntFieldUpdateOperationsInput | number | null
+    totalPoint?: NullableIntFieldUpdateOperationsInput | number | null
     phoneNumber?: StringFieldUpdateOperationsInput | string
     missions?: MissionUpdateManyWithoutUserNestedInput
     reviews?: ReviewUpdateManyWithoutUserNestedInput
@@ -9339,10 +9339,10 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     gender?: StringFieldUpdateOperationsInput | string
-    birth_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     region?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
-    total_point?: NullableIntFieldUpdateOperationsInput | number | null
+    totalPoint?: NullableIntFieldUpdateOperationsInput | number | null
     phoneNumber?: StringFieldUpdateOperationsInput | string
     missions?: MissionUncheckedUpdateManyWithoutUserNestedInput
     reviews?: ReviewUncheckedUpdateManyWithoutUserNestedInput
@@ -9354,10 +9354,10 @@ export namespace Prisma {
     name: string
     email: string
     gender: string
-    birth_date: Date | string
+    birthDate: Date | string
     region: string
     address: string
-    total_point?: number | null
+    totalPoint?: number | null
     phoneNumber: string
   }
 
@@ -9365,10 +9365,10 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     gender?: StringFieldUpdateOperationsInput | string
-    birth_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     region?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
-    total_point?: NullableIntFieldUpdateOperationsInput | number | null
+    totalPoint?: NullableIntFieldUpdateOperationsInput | number | null
     phoneNumber?: StringFieldUpdateOperationsInput | string
   }
 
@@ -9377,18 +9377,18 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     gender?: StringFieldUpdateOperationsInput | string
-    birth_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     region?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
-    total_point?: NullableIntFieldUpdateOperationsInput | number | null
+    totalPoint?: NullableIntFieldUpdateOperationsInput | number | null
     phoneNumber?: StringFieldUpdateOperationsInput | string
   }
 
   export type StoreCreateInput = {
-    store_name: string
-    verifcation_id: number
-    open_time?: Date | string | null
-    close_time?: Date | string | null
+    storeName: string
+    verifcationId: number
+    openTime?: Date | string | null
+    closeTime?: Date | string | null
     address: string
     foodType?: FoodTypeCreateNestedOneWithoutStoreInput
     missions?: MissionCreateNestedManyWithoutStoreInput
@@ -9398,22 +9398,22 @@ export namespace Prisma {
 
   export type StoreUncheckedCreateInput = {
     id?: number
-    store_name: string
-    verifcation_id: number
-    open_time?: Date | string | null
-    close_time?: Date | string | null
+    storeName: string
+    verifcationId: number
+    openTime?: Date | string | null
+    closeTime?: Date | string | null
     address: string
-    food_type_id?: number | null
+    foodTypeId?: number | null
     missions?: MissionUncheckedCreateNestedManyWithoutStoreInput
     reviews?: ReviewUncheckedCreateNestedManyWithoutStoreInput
     foods?: FoodUncheckedCreateNestedManyWithoutStoreInput
   }
 
   export type StoreUpdateInput = {
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
     foodType?: FoodTypeUpdateOneWithoutStoreNestedInput
     missions?: MissionUpdateManyWithoutStoreNestedInput
@@ -9423,12 +9423,12 @@ export namespace Prisma {
 
   export type StoreUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
-    food_type_id?: NullableIntFieldUpdateOperationsInput | number | null
+    foodTypeId?: NullableIntFieldUpdateOperationsInput | number | null
     missions?: MissionUncheckedUpdateManyWithoutStoreNestedInput
     reviews?: ReviewUncheckedUpdateManyWithoutStoreNestedInput
     foods?: FoodUncheckedUpdateManyWithoutStoreNestedInput
@@ -9436,30 +9436,30 @@ export namespace Prisma {
 
   export type StoreCreateManyInput = {
     id?: number
-    store_name: string
-    verifcation_id: number
-    open_time?: Date | string | null
-    close_time?: Date | string | null
+    storeName: string
+    verifcationId: number
+    openTime?: Date | string | null
+    closeTime?: Date | string | null
     address: string
-    food_type_id?: number | null
+    foodTypeId?: number | null
   }
 
   export type StoreUpdateManyMutationInput = {
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
   }
 
   export type StoreUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
-    food_type_id?: NullableIntFieldUpdateOperationsInput | number | null
+    foodTypeId?: NullableIntFieldUpdateOperationsInput | number | null
   }
 
   export type FoodTypeCreateInput = {
@@ -9510,7 +9510,7 @@ export namespace Prisma {
 
   export type FoodUncheckedCreateInput = {
     id?: number
-    store_id: number
+    storeId: number
     price: number
     name: string
   }
@@ -9523,14 +9523,14 @@ export namespace Prisma {
 
   export type FoodUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    store_id?: IntFieldUpdateOperationsInput | number
+    storeId?: IntFieldUpdateOperationsInput | number
     price?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
   }
 
   export type FoodCreateManyInput = {
     id?: number
-    store_id: number
+    storeId: number
     price: number
     name: string
   }
@@ -9542,7 +9542,7 @@ export namespace Prisma {
 
   export type FoodUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    store_id?: IntFieldUpdateOperationsInput | number
+    storeId?: IntFieldUpdateOperationsInput | number
     price?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
   }
@@ -9553,8 +9553,8 @@ export namespace Prisma {
   }
 
   export type UserFoodDbUncheckedCreateInput = {
-    user_id: number
-    food_id: number
+    userId: number
+    foodId: number
   }
 
   export type UserFoodDbUpdateInput = {
@@ -9563,13 +9563,13 @@ export namespace Prisma {
   }
 
   export type UserFoodDbUncheckedUpdateInput = {
-    user_id?: IntFieldUpdateOperationsInput | number
-    food_id?: IntFieldUpdateOperationsInput | number
+    userId?: IntFieldUpdateOperationsInput | number
+    foodId?: IntFieldUpdateOperationsInput | number
   }
 
   export type UserFoodDbCreateManyInput = {
-    user_id: number
-    food_id: number
+    userId: number
+    foodId: number
   }
 
   export type UserFoodDbUpdateManyMutationInput = {
@@ -9577,16 +9577,16 @@ export namespace Prisma {
   }
 
   export type UserFoodDbUncheckedUpdateManyInput = {
-    user_id?: IntFieldUpdateOperationsInput | number
-    food_id?: IntFieldUpdateOperationsInput | number
+    userId?: IntFieldUpdateOperationsInput | number
+    foodId?: IntFieldUpdateOperationsInput | number
   }
 
   export type MissionCreateInput = {
     status?: string
     content: string
     deadline: Date | string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
     point: number
     store: StoreCreateNestedOneWithoutMissionsInput
     user?: UserCreateNestedOneWithoutMissionsInput
@@ -9597,19 +9597,19 @@ export namespace Prisma {
     status?: string
     content: string
     deadline: Date | string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    store_id: number
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
+    storeId: number
     point: number
-    user_id?: number | null
+    userId?: number | null
   }
 
   export type MissionUpdateInput = {
     status?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     point?: IntFieldUpdateOperationsInput | number
     store?: StoreUpdateOneRequiredWithoutMissionsNestedInput
     user?: UserUpdateOneWithoutMissionsNestedInput
@@ -9620,11 +9620,11 @@ export namespace Prisma {
     status?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    store_id?: IntFieldUpdateOperationsInput | number
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeId?: IntFieldUpdateOperationsInput | number
     point?: IntFieldUpdateOperationsInput | number
-    user_id?: NullableIntFieldUpdateOperationsInput | number | null
+    userId?: NullableIntFieldUpdateOperationsInput | number | null
   }
 
   export type MissionCreateManyInput = {
@@ -9632,19 +9632,19 @@ export namespace Prisma {
     status?: string
     content: string
     deadline: Date | string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    store_id: number
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
+    storeId: number
     point: number
-    user_id?: number | null
+    userId?: number | null
   }
 
   export type MissionUpdateManyMutationInput = {
     status?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     point?: IntFieldUpdateOperationsInput | number
   }
 
@@ -9653,18 +9653,18 @@ export namespace Prisma {
     status?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    store_id?: IntFieldUpdateOperationsInput | number
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeId?: IntFieldUpdateOperationsInput | number
     point?: IntFieldUpdateOperationsInput | number
-    user_id?: NullableIntFieldUpdateOperationsInput | number | null
+    userId?: NullableIntFieldUpdateOperationsInput | number | null
   }
 
   export type ReviewCreateInput = {
     text: string
     rating: number
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
     user?: UserCreateNestedOneWithoutReviewsInput
     store?: StoreCreateNestedOneWithoutReviewsInput
   }
@@ -9673,17 +9673,17 @@ export namespace Prisma {
     id?: number
     text: string
     rating: number
-    user_id?: number | null
-    store_id?: number | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    userId?: number | null
+    storeId?: number | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
   }
 
   export type ReviewUpdateInput = {
     text?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     user?: UserUpdateOneWithoutReviewsNestedInput
     store?: StoreUpdateOneWithoutReviewsNestedInput
   }
@@ -9692,37 +9692,37 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     text?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
-    user_id?: NullableIntFieldUpdateOperationsInput | number | null
-    store_id?: NullableIntFieldUpdateOperationsInput | number | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    userId?: NullableIntFieldUpdateOperationsInput | number | null
+    storeId?: NullableIntFieldUpdateOperationsInput | number | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type ReviewCreateManyInput = {
     id?: number
     text: string
     rating: number
-    user_id?: number | null
-    store_id?: number | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    userId?: number | null
+    storeId?: number | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
   }
 
   export type ReviewUpdateManyMutationInput = {
     text?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type ReviewUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     text?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
-    user_id?: NullableIntFieldUpdateOperationsInput | number | null
-    store_id?: NullableIntFieldUpdateOperationsInput | number | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    userId?: NullableIntFieldUpdateOperationsInput | number | null
+    storeId?: NullableIntFieldUpdateOperationsInput | number | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -9819,16 +9819,16 @@ export namespace Prisma {
     name?: SortOrder
     email?: SortOrder
     gender?: SortOrder
-    birth_date?: SortOrder
+    birthDate?: SortOrder
     region?: SortOrder
     address?: SortOrder
-    total_point?: SortOrder
+    totalPoint?: SortOrder
     phoneNumber?: SortOrder
   }
 
   export type UserAvgOrderByAggregateInput = {
     id?: SortOrder
-    total_point?: SortOrder
+    totalPoint?: SortOrder
   }
 
   export type UserMaxOrderByAggregateInput = {
@@ -9836,10 +9836,10 @@ export namespace Prisma {
     name?: SortOrder
     email?: SortOrder
     gender?: SortOrder
-    birth_date?: SortOrder
+    birthDate?: SortOrder
     region?: SortOrder
     address?: SortOrder
-    total_point?: SortOrder
+    totalPoint?: SortOrder
     phoneNumber?: SortOrder
   }
 
@@ -9848,16 +9848,16 @@ export namespace Prisma {
     name?: SortOrder
     email?: SortOrder
     gender?: SortOrder
-    birth_date?: SortOrder
+    birthDate?: SortOrder
     region?: SortOrder
     address?: SortOrder
-    total_point?: SortOrder
+    totalPoint?: SortOrder
     phoneNumber?: SortOrder
   }
 
   export type UserSumOrderByAggregateInput = {
     id?: SortOrder
-    total_point?: SortOrder
+    totalPoint?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {
@@ -9958,44 +9958,44 @@ export namespace Prisma {
 
   export type StoreCountOrderByAggregateInput = {
     id?: SortOrder
-    store_name?: SortOrder
-    verifcation_id?: SortOrder
-    open_time?: SortOrder
-    close_time?: SortOrder
+    storeName?: SortOrder
+    verifcationId?: SortOrder
+    openTime?: SortOrder
+    closeTime?: SortOrder
     address?: SortOrder
-    food_type_id?: SortOrder
+    foodTypeId?: SortOrder
   }
 
   export type StoreAvgOrderByAggregateInput = {
     id?: SortOrder
-    verifcation_id?: SortOrder
-    food_type_id?: SortOrder
+    verifcationId?: SortOrder
+    foodTypeId?: SortOrder
   }
 
   export type StoreMaxOrderByAggregateInput = {
     id?: SortOrder
-    store_name?: SortOrder
-    verifcation_id?: SortOrder
-    open_time?: SortOrder
-    close_time?: SortOrder
+    storeName?: SortOrder
+    verifcationId?: SortOrder
+    openTime?: SortOrder
+    closeTime?: SortOrder
     address?: SortOrder
-    food_type_id?: SortOrder
+    foodTypeId?: SortOrder
   }
 
   export type StoreMinOrderByAggregateInput = {
     id?: SortOrder
-    store_name?: SortOrder
-    verifcation_id?: SortOrder
-    open_time?: SortOrder
-    close_time?: SortOrder
+    storeName?: SortOrder
+    verifcationId?: SortOrder
+    openTime?: SortOrder
+    closeTime?: SortOrder
     address?: SortOrder
-    food_type_id?: SortOrder
+    foodTypeId?: SortOrder
   }
 
   export type StoreSumOrderByAggregateInput = {
     id?: SortOrder
-    verifcation_id?: SortOrder
-    food_type_id?: SortOrder
+    verifcationId?: SortOrder
+    foodTypeId?: SortOrder
   }
 
   export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -10059,34 +10059,34 @@ export namespace Prisma {
 
   export type FoodCountOrderByAggregateInput = {
     id?: SortOrder
-    store_id?: SortOrder
+    storeId?: SortOrder
     price?: SortOrder
     name?: SortOrder
   }
 
   export type FoodAvgOrderByAggregateInput = {
     id?: SortOrder
-    store_id?: SortOrder
+    storeId?: SortOrder
     price?: SortOrder
   }
 
   export type FoodMaxOrderByAggregateInput = {
     id?: SortOrder
-    store_id?: SortOrder
+    storeId?: SortOrder
     price?: SortOrder
     name?: SortOrder
   }
 
   export type FoodMinOrderByAggregateInput = {
     id?: SortOrder
-    store_id?: SortOrder
+    storeId?: SortOrder
     price?: SortOrder
     name?: SortOrder
   }
 
   export type FoodSumOrderByAggregateInput = {
     id?: SortOrder
-    store_id?: SortOrder
+    storeId?: SortOrder
     price?: SortOrder
   }
 
@@ -10100,34 +10100,34 @@ export namespace Prisma {
     isNot?: FoodTypeWhereInput
   }
 
-  export type UserFoodDbUser_idFood_idCompoundUniqueInput = {
-    user_id: number
-    food_id: number
+  export type UserFoodDbUserIdFoodIdCompoundUniqueInput = {
+    userId: number
+    foodId: number
   }
 
   export type UserFoodDbCountOrderByAggregateInput = {
-    user_id?: SortOrder
-    food_id?: SortOrder
+    userId?: SortOrder
+    foodId?: SortOrder
   }
 
   export type UserFoodDbAvgOrderByAggregateInput = {
-    user_id?: SortOrder
-    food_id?: SortOrder
+    userId?: SortOrder
+    foodId?: SortOrder
   }
 
   export type UserFoodDbMaxOrderByAggregateInput = {
-    user_id?: SortOrder
-    food_id?: SortOrder
+    userId?: SortOrder
+    foodId?: SortOrder
   }
 
   export type UserFoodDbMinOrderByAggregateInput = {
-    user_id?: SortOrder
-    food_id?: SortOrder
+    userId?: SortOrder
+    foodId?: SortOrder
   }
 
   export type UserFoodDbSumOrderByAggregateInput = {
-    user_id?: SortOrder
-    food_id?: SortOrder
+    userId?: SortOrder
+    foodId?: SortOrder
   }
 
   export type UserNullableScalarRelationFilter = {
@@ -10146,18 +10146,18 @@ export namespace Prisma {
     status?: SortOrder
     content?: SortOrder
     deadline?: SortOrder
-    created_at?: SortOrder
-    updated_at?: SortOrder
-    store_id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    storeId?: SortOrder
     point?: SortOrder
-    user_id?: SortOrder
+    userId?: SortOrder
   }
 
   export type MissionAvgOrderByAggregateInput = {
     id?: SortOrder
-    store_id?: SortOrder
+    storeId?: SortOrder
     point?: SortOrder
-    user_id?: SortOrder
+    userId?: SortOrder
   }
 
   export type MissionMaxOrderByAggregateInput = {
@@ -10165,11 +10165,11 @@ export namespace Prisma {
     status?: SortOrder
     content?: SortOrder
     deadline?: SortOrder
-    created_at?: SortOrder
-    updated_at?: SortOrder
-    store_id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    storeId?: SortOrder
     point?: SortOrder
-    user_id?: SortOrder
+    userId?: SortOrder
   }
 
   export type MissionMinOrderByAggregateInput = {
@@ -10177,18 +10177,18 @@ export namespace Prisma {
     status?: SortOrder
     content?: SortOrder
     deadline?: SortOrder
-    created_at?: SortOrder
-    updated_at?: SortOrder
-    store_id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    storeId?: SortOrder
     point?: SortOrder
-    user_id?: SortOrder
+    userId?: SortOrder
   }
 
   export type MissionSumOrderByAggregateInput = {
     id?: SortOrder
-    store_id?: SortOrder
+    storeId?: SortOrder
     point?: SortOrder
-    user_id?: SortOrder
+    userId?: SortOrder
   }
 
   export type ReviewOrderByRelevanceInput = {
@@ -10201,44 +10201,44 @@ export namespace Prisma {
     id?: SortOrder
     text?: SortOrder
     rating?: SortOrder
-    user_id?: SortOrder
-    store_id?: SortOrder
-    created_at?: SortOrder
-    updated_at?: SortOrder
+    userId?: SortOrder
+    storeId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type ReviewAvgOrderByAggregateInput = {
     id?: SortOrder
     rating?: SortOrder
-    user_id?: SortOrder
-    store_id?: SortOrder
+    userId?: SortOrder
+    storeId?: SortOrder
   }
 
   export type ReviewMaxOrderByAggregateInput = {
     id?: SortOrder
     text?: SortOrder
     rating?: SortOrder
-    user_id?: SortOrder
-    store_id?: SortOrder
-    created_at?: SortOrder
-    updated_at?: SortOrder
+    userId?: SortOrder
+    storeId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type ReviewMinOrderByAggregateInput = {
     id?: SortOrder
     text?: SortOrder
     rating?: SortOrder
-    user_id?: SortOrder
-    store_id?: SortOrder
-    created_at?: SortOrder
-    updated_at?: SortOrder
+    userId?: SortOrder
+    storeId?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type ReviewSumOrderByAggregateInput = {
     id?: SortOrder
     rating?: SortOrder
-    user_id?: SortOrder
-    store_id?: SortOrder
+    userId?: SortOrder
+    storeId?: SortOrder
   }
 
   export type MissionCreateNestedManyWithoutUserInput = {
@@ -10878,8 +10878,8 @@ export namespace Prisma {
     status?: string
     content: string
     deadline: Date | string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
     point: number
     store: StoreCreateNestedOneWithoutMissionsInput
   }
@@ -10889,9 +10889,9 @@ export namespace Prisma {
     status?: string
     content: string
     deadline: Date | string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    store_id: number
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
+    storeId: number
     point: number
   }
 
@@ -10908,8 +10908,8 @@ export namespace Prisma {
   export type ReviewCreateWithoutUserInput = {
     text: string
     rating: number
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
     store?: StoreCreateNestedOneWithoutReviewsInput
   }
 
@@ -10917,9 +10917,9 @@ export namespace Prisma {
     id?: number
     text: string
     rating: number
-    store_id?: number | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    storeId?: number | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
   }
 
   export type ReviewCreateOrConnectWithoutUserInput = {
@@ -10937,7 +10937,7 @@ export namespace Prisma {
   }
 
   export type UserFoodDbUncheckedCreateWithoutUserInput = {
-    food_id: number
+    foodId: number
   }
 
   export type UserFoodDbCreateOrConnectWithoutUserInput = {
@@ -10974,11 +10974,11 @@ export namespace Prisma {
     status?: StringFilter<"Mission"> | string
     content?: StringFilter<"Mission"> | string
     deadline?: DateTimeFilter<"Mission"> | Date | string
-    created_at?: DateTimeNullableFilter<"Mission"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"Mission"> | Date | string | null
-    store_id?: IntFilter<"Mission"> | number
+    createdAt?: DateTimeNullableFilter<"Mission"> | Date | string | null
+    updatedAt?: DateTimeNullableFilter<"Mission"> | Date | string | null
+    storeId?: IntFilter<"Mission"> | number
     point?: IntFilter<"Mission"> | number
-    user_id?: IntNullableFilter<"Mission"> | number | null
+    userId?: IntNullableFilter<"Mission"> | number | null
   }
 
   export type ReviewUpsertWithWhereUniqueWithoutUserInput = {
@@ -11004,10 +11004,10 @@ export namespace Prisma {
     id?: IntFilter<"Review"> | number
     text?: StringFilter<"Review"> | string
     rating?: IntFilter<"Review"> | number
-    user_id?: IntNullableFilter<"Review"> | number | null
-    store_id?: IntNullableFilter<"Review"> | number | null
-    created_at?: DateTimeNullableFilter<"Review"> | Date | string | null
-    updated_at?: DateTimeNullableFilter<"Review"> | Date | string | null
+    userId?: IntNullableFilter<"Review"> | number | null
+    storeId?: IntNullableFilter<"Review"> | number | null
+    createdAt?: DateTimeNullableFilter<"Review"> | Date | string | null
+    updatedAt?: DateTimeNullableFilter<"Review"> | Date | string | null
   }
 
   export type UserFoodDbUpsertWithWhereUniqueWithoutUserInput = {
@@ -11030,8 +11030,8 @@ export namespace Prisma {
     AND?: UserFoodDbScalarWhereInput | UserFoodDbScalarWhereInput[]
     OR?: UserFoodDbScalarWhereInput[]
     NOT?: UserFoodDbScalarWhereInput | UserFoodDbScalarWhereInput[]
-    user_id?: IntFilter<"UserFoodDb"> | number
-    food_id?: IntFilter<"UserFoodDb"> | number
+    userId?: IntFilter<"UserFoodDb"> | number
+    foodId?: IntFilter<"UserFoodDb"> | number
   }
 
   export type FoodTypeCreateWithoutStoreInput = {
@@ -11054,8 +11054,8 @@ export namespace Prisma {
     status?: string
     content: string
     deadline: Date | string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
     point: number
     user?: UserCreateNestedOneWithoutMissionsInput
   }
@@ -11065,10 +11065,10 @@ export namespace Prisma {
     status?: string
     content: string
     deadline: Date | string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
     point: number
-    user_id?: number | null
+    userId?: number | null
   }
 
   export type MissionCreateOrConnectWithoutStoreInput = {
@@ -11084,8 +11084,8 @@ export namespace Prisma {
   export type ReviewCreateWithoutStoreInput = {
     text: string
     rating: number
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
     user?: UserCreateNestedOneWithoutReviewsInput
   }
 
@@ -11093,9 +11093,9 @@ export namespace Prisma {
     id?: number
     text: string
     rating: number
-    user_id?: number | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    userId?: number | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
   }
 
   export type ReviewCreateOrConnectWithoutStoreInput = {
@@ -11204,16 +11204,16 @@ export namespace Prisma {
     OR?: FoodScalarWhereInput[]
     NOT?: FoodScalarWhereInput | FoodScalarWhereInput[]
     id?: IntFilter<"Food"> | number
-    store_id?: IntFilter<"Food"> | number
+    storeId?: IntFilter<"Food"> | number
     price?: IntFilter<"Food"> | number
     name?: StringFilter<"Food"> | string
   }
 
   export type StoreCreateWithoutFoodTypeInput = {
-    store_name: string
-    verifcation_id: number
-    open_time?: Date | string | null
-    close_time?: Date | string | null
+    storeName: string
+    verifcationId: number
+    openTime?: Date | string | null
+    closeTime?: Date | string | null
     address: string
     missions?: MissionCreateNestedManyWithoutStoreInput
     reviews?: ReviewCreateNestedManyWithoutStoreInput
@@ -11222,10 +11222,10 @@ export namespace Prisma {
 
   export type StoreUncheckedCreateWithoutFoodTypeInput = {
     id?: number
-    store_name: string
-    verifcation_id: number
-    open_time?: Date | string | null
-    close_time?: Date | string | null
+    storeName: string
+    verifcationId: number
+    openTime?: Date | string | null
+    closeTime?: Date | string | null
     address: string
     missions?: MissionUncheckedCreateNestedManyWithoutStoreInput
     reviews?: ReviewUncheckedCreateNestedManyWithoutStoreInput
@@ -11242,7 +11242,7 @@ export namespace Prisma {
   }
 
   export type UserFoodDbUncheckedCreateWithoutFoodTypeInput = {
-    user_id: number
+    userId: number
   }
 
   export type UserFoodDbCreateOrConnectWithoutFoodTypeInput = {
@@ -11267,10 +11267,10 @@ export namespace Prisma {
   }
 
   export type StoreUpdateWithoutFoodTypeInput = {
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
     missions?: MissionUpdateManyWithoutStoreNestedInput
     reviews?: ReviewUpdateManyWithoutStoreNestedInput
@@ -11279,10 +11279,10 @@ export namespace Prisma {
 
   export type StoreUncheckedUpdateWithoutFoodTypeInput = {
     id?: IntFieldUpdateOperationsInput | number
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
     missions?: MissionUncheckedUpdateManyWithoutStoreNestedInput
     reviews?: ReviewUncheckedUpdateManyWithoutStoreNestedInput
@@ -11306,10 +11306,10 @@ export namespace Prisma {
   }
 
   export type StoreCreateWithoutFoodsInput = {
-    store_name: string
-    verifcation_id: number
-    open_time?: Date | string | null
-    close_time?: Date | string | null
+    storeName: string
+    verifcationId: number
+    openTime?: Date | string | null
+    closeTime?: Date | string | null
     address: string
     foodType?: FoodTypeCreateNestedOneWithoutStoreInput
     missions?: MissionCreateNestedManyWithoutStoreInput
@@ -11318,12 +11318,12 @@ export namespace Prisma {
 
   export type StoreUncheckedCreateWithoutFoodsInput = {
     id?: number
-    store_name: string
-    verifcation_id: number
-    open_time?: Date | string | null
-    close_time?: Date | string | null
+    storeName: string
+    verifcationId: number
+    openTime?: Date | string | null
+    closeTime?: Date | string | null
     address: string
-    food_type_id?: number | null
+    foodTypeId?: number | null
     missions?: MissionUncheckedCreateNestedManyWithoutStoreInput
     reviews?: ReviewUncheckedCreateNestedManyWithoutStoreInput
   }
@@ -11345,10 +11345,10 @@ export namespace Prisma {
   }
 
   export type StoreUpdateWithoutFoodsInput = {
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
     foodType?: FoodTypeUpdateOneWithoutStoreNestedInput
     missions?: MissionUpdateManyWithoutStoreNestedInput
@@ -11357,12 +11357,12 @@ export namespace Prisma {
 
   export type StoreUncheckedUpdateWithoutFoodsInput = {
     id?: IntFieldUpdateOperationsInput | number
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
-    food_type_id?: NullableIntFieldUpdateOperationsInput | number | null
+    foodTypeId?: NullableIntFieldUpdateOperationsInput | number | null
     missions?: MissionUncheckedUpdateManyWithoutStoreNestedInput
     reviews?: ReviewUncheckedUpdateManyWithoutStoreNestedInput
   }
@@ -11371,10 +11371,10 @@ export namespace Prisma {
     name: string
     email: string
     gender: string
-    birth_date: Date | string
+    birthDate: Date | string
     region: string
     address: string
-    total_point?: number | null
+    totalPoint?: number | null
     phoneNumber: string
     missions?: MissionCreateNestedManyWithoutUserInput
     reviews?: ReviewCreateNestedManyWithoutUserInput
@@ -11385,10 +11385,10 @@ export namespace Prisma {
     name: string
     email: string
     gender: string
-    birth_date: Date | string
+    birthDate: Date | string
     region: string
     address: string
-    total_point?: number | null
+    totalPoint?: number | null
     phoneNumber: string
     missions?: MissionUncheckedCreateNestedManyWithoutUserInput
     reviews?: ReviewUncheckedCreateNestedManyWithoutUserInput
@@ -11430,10 +11430,10 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     gender?: StringFieldUpdateOperationsInput | string
-    birth_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     region?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
-    total_point?: NullableIntFieldUpdateOperationsInput | number | null
+    totalPoint?: NullableIntFieldUpdateOperationsInput | number | null
     phoneNumber?: StringFieldUpdateOperationsInput | string
     missions?: MissionUpdateManyWithoutUserNestedInput
     reviews?: ReviewUpdateManyWithoutUserNestedInput
@@ -11444,10 +11444,10 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     gender?: StringFieldUpdateOperationsInput | string
-    birth_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     region?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
-    total_point?: NullableIntFieldUpdateOperationsInput | number | null
+    totalPoint?: NullableIntFieldUpdateOperationsInput | number | null
     phoneNumber?: StringFieldUpdateOperationsInput | string
     missions?: MissionUncheckedUpdateManyWithoutUserNestedInput
     reviews?: ReviewUncheckedUpdateManyWithoutUserNestedInput
@@ -11476,10 +11476,10 @@ export namespace Prisma {
   }
 
   export type StoreCreateWithoutMissionsInput = {
-    store_name: string
-    verifcation_id: number
-    open_time?: Date | string | null
-    close_time?: Date | string | null
+    storeName: string
+    verifcationId: number
+    openTime?: Date | string | null
+    closeTime?: Date | string | null
     address: string
     foodType?: FoodTypeCreateNestedOneWithoutStoreInput
     reviews?: ReviewCreateNestedManyWithoutStoreInput
@@ -11488,12 +11488,12 @@ export namespace Prisma {
 
   export type StoreUncheckedCreateWithoutMissionsInput = {
     id?: number
-    store_name: string
-    verifcation_id: number
-    open_time?: Date | string | null
-    close_time?: Date | string | null
+    storeName: string
+    verifcationId: number
+    openTime?: Date | string | null
+    closeTime?: Date | string | null
     address: string
-    food_type_id?: number | null
+    foodTypeId?: number | null
     reviews?: ReviewUncheckedCreateNestedManyWithoutStoreInput
     foods?: FoodUncheckedCreateNestedManyWithoutStoreInput
   }
@@ -11507,10 +11507,10 @@ export namespace Prisma {
     name: string
     email: string
     gender: string
-    birth_date: Date | string
+    birthDate: Date | string
     region: string
     address: string
-    total_point?: number | null
+    totalPoint?: number | null
     phoneNumber: string
     reviews?: ReviewCreateNestedManyWithoutUserInput
     userFoods?: UserFoodDbCreateNestedManyWithoutUserInput
@@ -11521,10 +11521,10 @@ export namespace Prisma {
     name: string
     email: string
     gender: string
-    birth_date: Date | string
+    birthDate: Date | string
     region: string
     address: string
-    total_point?: number | null
+    totalPoint?: number | null
     phoneNumber: string
     reviews?: ReviewUncheckedCreateNestedManyWithoutUserInput
     userFoods?: UserFoodDbUncheckedCreateNestedManyWithoutUserInput
@@ -11547,10 +11547,10 @@ export namespace Prisma {
   }
 
   export type StoreUpdateWithoutMissionsInput = {
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
     foodType?: FoodTypeUpdateOneWithoutStoreNestedInput
     reviews?: ReviewUpdateManyWithoutStoreNestedInput
@@ -11559,12 +11559,12 @@ export namespace Prisma {
 
   export type StoreUncheckedUpdateWithoutMissionsInput = {
     id?: IntFieldUpdateOperationsInput | number
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
-    food_type_id?: NullableIntFieldUpdateOperationsInput | number | null
+    foodTypeId?: NullableIntFieldUpdateOperationsInput | number | null
     reviews?: ReviewUncheckedUpdateManyWithoutStoreNestedInput
     foods?: FoodUncheckedUpdateManyWithoutStoreNestedInput
   }
@@ -11584,10 +11584,10 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     gender?: StringFieldUpdateOperationsInput | string
-    birth_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     region?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
-    total_point?: NullableIntFieldUpdateOperationsInput | number | null
+    totalPoint?: NullableIntFieldUpdateOperationsInput | number | null
     phoneNumber?: StringFieldUpdateOperationsInput | string
     reviews?: ReviewUpdateManyWithoutUserNestedInput
     userFoods?: UserFoodDbUpdateManyWithoutUserNestedInput
@@ -11598,10 +11598,10 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     gender?: StringFieldUpdateOperationsInput | string
-    birth_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     region?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
-    total_point?: NullableIntFieldUpdateOperationsInput | number | null
+    totalPoint?: NullableIntFieldUpdateOperationsInput | number | null
     phoneNumber?: StringFieldUpdateOperationsInput | string
     reviews?: ReviewUncheckedUpdateManyWithoutUserNestedInput
     userFoods?: UserFoodDbUncheckedUpdateManyWithoutUserNestedInput
@@ -11611,10 +11611,10 @@ export namespace Prisma {
     name: string
     email: string
     gender: string
-    birth_date: Date | string
+    birthDate: Date | string
     region: string
     address: string
-    total_point?: number | null
+    totalPoint?: number | null
     phoneNumber: string
     missions?: MissionCreateNestedManyWithoutUserInput
     userFoods?: UserFoodDbCreateNestedManyWithoutUserInput
@@ -11625,10 +11625,10 @@ export namespace Prisma {
     name: string
     email: string
     gender: string
-    birth_date: Date | string
+    birthDate: Date | string
     region: string
     address: string
-    total_point?: number | null
+    totalPoint?: number | null
     phoneNumber: string
     missions?: MissionUncheckedCreateNestedManyWithoutUserInput
     userFoods?: UserFoodDbUncheckedCreateNestedManyWithoutUserInput
@@ -11640,10 +11640,10 @@ export namespace Prisma {
   }
 
   export type StoreCreateWithoutReviewsInput = {
-    store_name: string
-    verifcation_id: number
-    open_time?: Date | string | null
-    close_time?: Date | string | null
+    storeName: string
+    verifcationId: number
+    openTime?: Date | string | null
+    closeTime?: Date | string | null
     address: string
     foodType?: FoodTypeCreateNestedOneWithoutStoreInput
     missions?: MissionCreateNestedManyWithoutStoreInput
@@ -11652,12 +11652,12 @@ export namespace Prisma {
 
   export type StoreUncheckedCreateWithoutReviewsInput = {
     id?: number
-    store_name: string
-    verifcation_id: number
-    open_time?: Date | string | null
-    close_time?: Date | string | null
+    storeName: string
+    verifcationId: number
+    openTime?: Date | string | null
+    closeTime?: Date | string | null
     address: string
-    food_type_id?: number | null
+    foodTypeId?: number | null
     missions?: MissionUncheckedCreateNestedManyWithoutStoreInput
     foods?: FoodUncheckedCreateNestedManyWithoutStoreInput
   }
@@ -11682,10 +11682,10 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     gender?: StringFieldUpdateOperationsInput | string
-    birth_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     region?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
-    total_point?: NullableIntFieldUpdateOperationsInput | number | null
+    totalPoint?: NullableIntFieldUpdateOperationsInput | number | null
     phoneNumber?: StringFieldUpdateOperationsInput | string
     missions?: MissionUpdateManyWithoutUserNestedInput
     userFoods?: UserFoodDbUpdateManyWithoutUserNestedInput
@@ -11696,10 +11696,10 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     gender?: StringFieldUpdateOperationsInput | string
-    birth_date?: DateTimeFieldUpdateOperationsInput | Date | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     region?: StringFieldUpdateOperationsInput | string
     address?: StringFieldUpdateOperationsInput | string
-    total_point?: NullableIntFieldUpdateOperationsInput | number | null
+    totalPoint?: NullableIntFieldUpdateOperationsInput | number | null
     phoneNumber?: StringFieldUpdateOperationsInput | string
     missions?: MissionUncheckedUpdateManyWithoutUserNestedInput
     userFoods?: UserFoodDbUncheckedUpdateManyWithoutUserNestedInput
@@ -11717,10 +11717,10 @@ export namespace Prisma {
   }
 
   export type StoreUpdateWithoutReviewsInput = {
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
     foodType?: FoodTypeUpdateOneWithoutStoreNestedInput
     missions?: MissionUpdateManyWithoutStoreNestedInput
@@ -11729,12 +11729,12 @@ export namespace Prisma {
 
   export type StoreUncheckedUpdateWithoutReviewsInput = {
     id?: IntFieldUpdateOperationsInput | number
-    store_name?: StringFieldUpdateOperationsInput | string
-    verifcation_id?: IntFieldUpdateOperationsInput | number
-    open_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    close_time?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeName?: StringFieldUpdateOperationsInput | string
+    verifcationId?: IntFieldUpdateOperationsInput | number
+    openTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    closeTime?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     address?: StringFieldUpdateOperationsInput | string
-    food_type_id?: NullableIntFieldUpdateOperationsInput | number | null
+    foodTypeId?: NullableIntFieldUpdateOperationsInput | number | null
     missions?: MissionUncheckedUpdateManyWithoutStoreNestedInput
     foods?: FoodUncheckedUpdateManyWithoutStoreNestedInput
   }
@@ -11744,9 +11744,9 @@ export namespace Prisma {
     status?: string
     content: string
     deadline: Date | string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
-    store_id: number
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
+    storeId: number
     point: number
   }
 
@@ -11754,21 +11754,21 @@ export namespace Prisma {
     id?: number
     text: string
     rating: number
-    store_id?: number | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    storeId?: number | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
   }
 
   export type UserFoodDbCreateManyUserInput = {
-    food_id: number
+    foodId: number
   }
 
   export type MissionUpdateWithoutUserInput = {
     status?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     point?: IntFieldUpdateOperationsInput | number
     store?: StoreUpdateOneRequiredWithoutMissionsNestedInput
   }
@@ -11778,9 +11778,9 @@ export namespace Prisma {
     status?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    store_id?: IntFieldUpdateOperationsInput | number
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeId?: IntFieldUpdateOperationsInput | number
     point?: IntFieldUpdateOperationsInput | number
   }
 
@@ -11789,17 +11789,17 @@ export namespace Prisma {
     status?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    store_id?: IntFieldUpdateOperationsInput | number
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeId?: IntFieldUpdateOperationsInput | number
     point?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReviewUpdateWithoutUserInput = {
     text?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     store?: StoreUpdateOneWithoutReviewsNestedInput
   }
 
@@ -11807,18 +11807,18 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     text?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
-    store_id?: NullableIntFieldUpdateOperationsInput | number | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeId?: NullableIntFieldUpdateOperationsInput | number | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type ReviewUncheckedUpdateManyWithoutUserInput = {
     id?: IntFieldUpdateOperationsInput | number
     text?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
-    store_id?: NullableIntFieldUpdateOperationsInput | number | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    storeId?: NullableIntFieldUpdateOperationsInput | number | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type UserFoodDbUpdateWithoutUserInput = {
@@ -11826,11 +11826,11 @@ export namespace Prisma {
   }
 
   export type UserFoodDbUncheckedUpdateWithoutUserInput = {
-    food_id?: IntFieldUpdateOperationsInput | number
+    foodId?: IntFieldUpdateOperationsInput | number
   }
 
   export type UserFoodDbUncheckedUpdateManyWithoutUserInput = {
-    food_id?: IntFieldUpdateOperationsInput | number
+    foodId?: IntFieldUpdateOperationsInput | number
   }
 
   export type MissionCreateManyStoreInput = {
@@ -11838,19 +11838,19 @@ export namespace Prisma {
     status?: string
     content: string
     deadline: Date | string
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
     point: number
-    user_id?: number | null
+    userId?: number | null
   }
 
   export type ReviewCreateManyStoreInput = {
     id?: number
     text: string
     rating: number
-    user_id?: number | null
-    created_at?: Date | string | null
-    updated_at?: Date | string | null
+    userId?: number | null
+    createdAt?: Date | string | null
+    updatedAt?: Date | string | null
   }
 
   export type FoodCreateManyStoreInput = {
@@ -11863,8 +11863,8 @@ export namespace Prisma {
     status?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     point?: IntFieldUpdateOperationsInput | number
     user?: UserUpdateOneWithoutMissionsNestedInput
   }
@@ -11874,10 +11874,10 @@ export namespace Prisma {
     status?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     point?: IntFieldUpdateOperationsInput | number
-    user_id?: NullableIntFieldUpdateOperationsInput | number | null
+    userId?: NullableIntFieldUpdateOperationsInput | number | null
   }
 
   export type MissionUncheckedUpdateManyWithoutStoreInput = {
@@ -11885,17 +11885,17 @@ export namespace Prisma {
     status?: StringFieldUpdateOperationsInput | string
     content?: StringFieldUpdateOperationsInput | string
     deadline?: DateTimeFieldUpdateOperationsInput | Date | string
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     point?: IntFieldUpdateOperationsInput | number
-    user_id?: NullableIntFieldUpdateOperationsInput | number | null
+    userId?: NullableIntFieldUpdateOperationsInput | number | null
   }
 
   export type ReviewUpdateWithoutStoreInput = {
     text?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
     user?: UserUpdateOneWithoutReviewsNestedInput
   }
 
@@ -11903,18 +11903,18 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     text?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
-    user_id?: NullableIntFieldUpdateOperationsInput | number | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    userId?: NullableIntFieldUpdateOperationsInput | number | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type ReviewUncheckedUpdateManyWithoutStoreInput = {
     id?: IntFieldUpdateOperationsInput | number
     text?: StringFieldUpdateOperationsInput | string
     rating?: IntFieldUpdateOperationsInput | number
-    user_id?: NullableIntFieldUpdateOperationsInput | number | null
-    created_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    updated_at?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    userId?: NullableIntFieldUpdateOperationsInput | number | null
+    createdAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    updatedAt?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type FoodUpdateWithoutStoreInput = {
@@ -11935,7 +11935,7 @@ export namespace Prisma {
   }
 
   export type UserFoodDbCreateManyFoodTypeInput = {
-    user_id: number
+    userId: number
   }
 
   export type UserFoodDbUpdateWithoutFoodTypeInput = {
@@ -11943,11 +11943,11 @@ export namespace Prisma {
   }
 
   export type UserFoodDbUncheckedUpdateWithoutFoodTypeInput = {
-    user_id?: IntFieldUpdateOperationsInput | number
+    userId?: IntFieldUpdateOperationsInput | number
   }
 
   export type UserFoodDbUncheckedUpdateManyWithoutFoodTypeInput = {
-    user_id?: IntFieldUpdateOperationsInput | number
+    userId?: IntFieldUpdateOperationsInput | number
   }
 
 

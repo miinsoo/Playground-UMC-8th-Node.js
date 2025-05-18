@@ -1,6 +1,11 @@
 import { StatusCodes } from "http-status-codes";  
 import { bodyToAddMission, bodyToChallengeMission } from "../dtos/mission.dto.js";  
-import { addMission as addMissionService, challengeMission as challengeMissionService } from "../services/mission.service.js";  
+import { 
+  addMission as addMissionService, 
+  challengeMission as challengeMissionService,
+  showStoreMission as showStoreMissionService,
+  showUserMission as showUserMissionService 
+} from "../services/mission.service.js";  
 
 export const addStoreMission = async (req, res, next) => {
     const { storeId } = req.params;
